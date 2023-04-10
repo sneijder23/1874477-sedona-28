@@ -1,0 +1,42 @@
+@use "variables.scss" as v;
+@use "fonts.scss" as f;
+
+@mixin font($weight, $size, $color, $height) {
+  font-family: f.$family;
+  font-style: f.$style-normal;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin center-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin wrapper-block {
+  margin: 0;
+  padding: 24px 18px;
+}
+
+@mixin button {
+  .button {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 12px 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: v.$textColor3;
+    background-color: v.$backgroundColor2;
+    border: none;
+  }
+}

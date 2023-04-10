@@ -1,0 +1,21 @@
+@use "fonts.scss" as f;
+@use "variables.scss" as v;
+@use "mixins.scss" as m;
+
+.search__wrapper {
+  margin: 0;
+  padding: 38px 18px 49px 18px;
+}
+
+.search__header-title {
+  font-size: f.$font-21;
+  padding-bottom: 30px;
+}
+
+.search__header-content {
+  padding-bottom: 32px;
+}
+
+.search__button {
+  @include m.font (f.$bold, f.$font-21, v.$textColor3, f.$line-height-title);
+}

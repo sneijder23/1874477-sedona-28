@@ -1,0 +1,47 @@
+@use "variables" as v;
+@use "fonts" as f;
+@use "mixins" as m;
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  @include m.font(f.$normal, f.$font-14, v.$textColor1, f.$line-height-contant);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main-container {
+  min-height: 100%;
+  margin: 0 auto;
+  flex-grow: 1;
+  background-color: v.$backgroundColor1;
+}

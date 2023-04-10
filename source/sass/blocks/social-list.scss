@@ -1,0 +1,22 @@
+@use "mixins.scss" as m;
+
+.social__list {
+  @include m.list-reset;
+  display: flex;
+  align-items: center;
+}
+
+.social__item {
+  display: flex;
+  align-items: center;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 6px;
+}
+
+.social__link {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+}

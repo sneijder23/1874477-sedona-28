@@ -1,0 +1,42 @@
+@use "variables.scss" as v;
+@use "fonts.scss" as f;
+@use "mixins.scss" as m;
+
+.header {
+  width: 100%;
+}
+
+.header__title {
+  @include m.font (f.$bold, f.$font-18, v.$textColor2, f.$line-height-title);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.header__title--color-white {
+  color: v.$textColor3;
+}
+
+.header__content {
+  @include m.font (f.$normal, f.$font-14, v.$textColor1, f.$line-height-contant);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.header__content--color-white {
+  color: v.$textColor3;
+}
+
+.header__subtitle {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header__subtitle--color-white {
+  color: v.$textColor3;
+}
