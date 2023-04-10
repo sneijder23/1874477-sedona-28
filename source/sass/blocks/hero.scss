@@ -1,0 +1,18 @@
+@use "variables.scss" as v;
+
+.hero {
+  background-color: v.$backgroundColor3;
+  background-image: url("../../img/hero-triangle.svg"),
+    url("../../img/hero-background-mobile.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center bottom, center;
+  background-size: cover, cover;
+}
+
+.hero__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 18px 57px 18px;
+  margin: 0;
+}

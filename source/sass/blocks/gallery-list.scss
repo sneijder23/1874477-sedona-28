@@ -1,0 +1,62 @@
+@use "variables.scss" as v;
+@use "fonts.scss" as f;
+@use "mixins.scss" as m;
+
+.gallery__header {
+  margin: 0;
+  padding: 37px 20px 50px 20px;
+}
+
+.gallery__title {
+  padding-bottom: 30px;
+}
+
+.gallery__list {
+  @include m.list-reset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery__item {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.gallery__item::before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: -20px;
+  right: -20px;
+  height: 1px;
+  background-color: v.$border-backgroundColor;
+}
+
+.gallery__item:last-child::after {
+  content: "";
+  position: absolute;
+  bottom: 24px;
+  left: -20px;
+  right: -20px;
+  height: 1px;
+  background-color: v.$border-backgroundColor;
+}
+
+.gallery__image-title {
+  font-weight: f.$bold;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 15px 0 10px 0;
+}
+
+.gallery__image-author {
+  margin: 0;
+  padding: 0 0 16px 0;
+}
+
+.gallery__image-likes {
+  font-weight: f.$bold;
+  text-transform: uppercase;
+  padding-left: 57px;
+}
