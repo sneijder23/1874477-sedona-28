@@ -1,5 +1,4 @@
 @use "variables.scss" as v;
-@use "fonts.scss" as f;
 @use "mixins.scss" as m;
 
 .gallery__header {
@@ -30,7 +29,7 @@
   left: -20px;
   right: -20px;
   height: 1px;
-  background-color: v.$border-backgroundColor;
+  background-color: v.$mercury;
 }
 
 .gallery__item:last-child::after {
@@ -40,11 +39,11 @@
   left: -20px;
   right: -20px;
   height: 1px;
-  background-color: v.$border-backgroundColor;
+  background-color: v.$mercury;
 }
 
 .gallery__image-title {
-  font-weight: f.$bold;
+  font-weight: 700;
   text-transform: uppercase;
   margin: 0;
   padding: 15px 0 10px 0;
@@ -56,7 +55,7 @@
 }
 
 .gallery__image-likes {
-  font-weight: f.$bold;
+  font-weight: 700;
   text-transform: uppercase;
   padding-left: 57px;
 }

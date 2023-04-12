@@ -1,5 +1,4 @@
 @use "variables" as v;
-@use "fonts" as f;
 @use "mixins" as m;
 
 
@@ -18,8 +17,13 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
-  @include m.font(f.$normal, f.$font-14, v.$textColor1, f.$line-height-contant);
+  @include m.font(400, 14px, v.$primary, 21px);
+  font-family: v.$family;
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -43,5 +47,5 @@ body {
   min-height: 100%;
   margin: 0 auto;
   flex-grow: 1;
-  background-color: v.$backgroundColor1;
+  background-color: v.$white;
 }

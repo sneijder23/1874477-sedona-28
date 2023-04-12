@@ -1,9 +1,10 @@
 @use "variables.scss" as v;
 
 .hero {
-  background-color: v.$backgroundColor3;
-  background-image: url("../../img/hero-triangle.svg"),
-    url("../../img/hero-background-mobile.jpg");
+  background-color: v.$wedgewood;
+  background-image:
+    url("../img/hero-triangle.svg"),
+    url("../img/hero-background-mobile.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: center bottom, center;
   background-size: cover, cover;

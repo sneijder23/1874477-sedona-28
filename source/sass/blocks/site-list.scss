@@ -1,5 +1,4 @@
 @use "variables.scss" as v;
-@use "fonts.scss" as f;
 @use "mixins.scss" as m;
 
 .site-list {
@@ -10,7 +9,7 @@
 }
 
 .site-list__item {
-  background-color: v.$backgroundColor2;
+  background-color: v.$half-baked;
   display: flex;
   justify-content: center;
   align-self: stretch;
@@ -18,12 +17,12 @@
 }
 
 .site-list__link {
-  @include m.font(f.$bold, f.$font-18, v.$textColor2, f.$line-height-title);
+  @include m.font(700, 18px, v.$accent, 26px);
   text-transform: uppercase;
   text-decoration: none;
   padding: 0 14px;
 }
 
 .site-list__link--color-white {
-  color: v.$textColor3;
+  color: v.$secondary;
 }

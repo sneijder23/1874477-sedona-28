@@ -1,5 +1,4 @@
 @use "variables.scss" as v;
-@use "fonts.scss" as f;
 @use "mixins.scss" as m;
 
 .main-footer__wrapper {
@@ -11,7 +10,7 @@
   align-items: center;
   margin: 0 auto;
   padding: 33px 18px;
-  background-color: v.$backgroundColor1;
+  background-color: v.$white;
 }
 
 .meta {
@@ -20,7 +19,7 @@
 }
 
 .meta__link {
-  @include m.font (f.$bold, f.$font-21, v.$textColor2, f.$line-height-title);
+  @include m.font (700, 21px, v.$accent, 26px);
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;

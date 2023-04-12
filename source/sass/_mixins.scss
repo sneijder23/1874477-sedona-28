@@ -2,8 +2,7 @@
 @use "fonts.scss" as f;
 
 @mixin font($weight, $size, $color, $height) {
-  font-family: f.$family;
-  font-style: f.$style-normal;
+  font-style: normal;
   font-size: $size;
   line-height: $height;
   font-weight: $weight;
@@ -35,8 +34,8 @@
     padding: 12px 12px;
     text-transform: uppercase;
     text-decoration: none;
-    color: v.$textColor3;
-    background-color: v.$backgroundColor2;
+    color: v.$secondary;
+    background-color: v.$half-baked;
     border: none;
   }
 }

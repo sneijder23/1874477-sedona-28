@@ -1,5 +1,4 @@
 @use "variables.scss" as v;
-@use "fonts.scss" as f;
 @use "mixins.scss" as m;
 
 .reason__header {
@@ -31,8 +30,8 @@
   display: block;
   width: calc(100% + 36px);
   height: 100%;
-  background-color: v.$backgroundColor2;
-  background-image: url("../../img/header-trinagle-mobile.svg");
+  background-color: v.$half-baked;
+  background-image: url("../img/header-trinagle-mobile.svg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 768px 37px;
@@ -49,16 +48,16 @@
   padding: 0;
 }
 
-.reason_wrapper {
+.reason__wrapper {
   padding: 37px 0;
-  background-color: v.$backgroundColor2;
+  background-color: v.$half-baked;
 }
 
 .reason__item--background-grey {
   position: relative;
   margin: 0;
   padding: 24px 26px;
-  background-color: v.$backgroundColor4;
+  background-color: v.$gallery;
 }
 
 .reason__item--background-grey:not(:nth-child(3))::before {
@@ -68,11 +67,11 @@
   left: 0;
   right: 0;
   height: 1px;
-  background-color: v.$lineBottom-Color;
+  background-color: v.$alto;
 }
 
 .reason__title {
-  @include m.font (f.$bold, f.$font-18, v.$textColor2, f.$line-height-title);
+  @include m.font (700, 18px, v.$accent, 26px);
   text-align: center;
   text-transform: uppercase;
   margin: 0;
@@ -80,7 +79,7 @@
 }
 
 .reason__title--color-white {
-  color: v.$textColor3;
+  color: v.$secondary;
 }
 
 .reason__title--mobile {
@@ -89,7 +88,7 @@
 }
 
 .reason__content {
-  @include m.font (f.$normal, f.$font-14, v.$textColor1, f.$line-height-contant);
+  @include m.font (400, 14px, v.$primary, 21px);
   text-align: center;
   text-transform: uppercase;
   margin: 0;
@@ -97,7 +96,7 @@
 }
 
 .reason__content--color-white {
-  color: v.$textColor3;
+  color: v.$secondary;
 }
 
 .reason__content--mobile {
@@ -106,7 +105,7 @@
 }
 
 .reason__pagination {
-  @include m.font (f.$normal, f.$font-14, v.$textColor1, f.$line-height-contant);
+  @include m.font (400, 14px, v.$primary, 21px);
   text-align: center;
   text-transform: uppercase;
   display: flex;
@@ -116,9 +115,5 @@
 }
 
 .reason__pagination--color-white {
-  color: v.$textColor3;
+  color: v.$secondary;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/module3-task1

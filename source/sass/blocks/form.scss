@@ -1,5 +1,4 @@
 @use "variables.scss" as v;
-@use "fonts.scss" as f;
 @use "mixins.scss" as m;
 
 .form {
@@ -20,12 +19,12 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: v.$border-backgroundColor;
+  background-color: v.$mercury;
   content: "";
 }
 
 .group__title {
-  @include m.font (f.$bold, f.$font-18, v.$textColor2, f.$line-height-title);
+  @include m.font (700, 18px, v.$accent, 26px);
   margin: 0;
   padding: 34px 0 0;
   text-align: center;
@@ -56,10 +55,10 @@
 }
 
 .form-list__input {
-  @include m.font (f.$bold, f.$font-18, v.$textColor2, f.$line-height-title);
+  @include m.font (700, 18px, v.$accent, 26px);
   flex: 1;
   padding: 16px 70px 16px 16px;
-  background-color: v.$input-backgroundColor;
+  background-color: v.$concrete;
   border: none;
 }
 
@@ -75,8 +74,8 @@
   right: 0;
   width: 58px;
   height: 58px;
-  background-color: v.$inputIcon-backgroundColor;
-  background-image: url("../../img/phone.svg");
+  background-color: v.$light-gray;
+  background-image: url("../img/phone.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 18px 18px;
@@ -89,8 +88,8 @@
   right: 0;
   width: 58px;
   height: 58px;
-  background-color: v.$inputIcon-backgroundColor;
-  background-image: url("../../img/email.svg");
+  background-color: v.$light-gray;
+  background-image: url("../img/email.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 16px 12px;
@@ -102,11 +101,11 @@
   left: 0;
   width: 46px;
   height: 46px;
-  background-color: v.$input-backgroundColor;
+  background-color: v.$concrete;
 }
 
 .form-list__label {
-  @include m.font (f.$bold, f.$font-18, v.$textColor2, f.$line-height-title);
+  @include m.font (700, 18px, v.$accent, 26px);
   text-transform: none;
   position: absolute;
   top: 0;
@@ -115,13 +114,13 @@
 }
 
 .form-list__input[type="checkbox"]:checked + .form-list__mark {
-  background-image: url("../../img/checked.svg");
+  background-image: url("../img/checked.svg");
   background-repeat: no-repeat;
   background-position: 12px 15px;
 }
 
 .form-list__input[type="radio"] + .form-list__mark {
-  border-radius: v.$radius-circle;
+  border-radius: 50%;
 }
 
 .form-list__input[type="radio"]:checked + .form-list__mark::after {
@@ -131,19 +130,25 @@
   top: 15px;
   left: 15px;
   border-radius: 50%;
-  background-color: v.$textColor1;
+  background-color: v.$primary;
   content: "";
 }
 
 .review-text__input {
-  @include m.font (f.$bold, f.$font-18, v.$textColor2, f.$line-height-title);
+  @include m.font (700, 18px, v.$accent, 26px);
+  font-family: v.$family;
   margin: 0;
   padding: 16px;
 }
 
+.form__submit {
+  @include m.font (700, 21px, v.$secondary, 26px);
+  font-family: v.$family;
+}
+
 .form__legend {
-  font-size: f.$font-12;
+  font-size: 12px;
   text-align: center;
   text-transform: uppercase;
-  opacity: v.$opacity-6;
+  opacity: 0.6;
 }
