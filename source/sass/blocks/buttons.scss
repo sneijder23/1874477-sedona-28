@@ -1,0 +1,9 @@
+@use "mixins";
+@include mixins.button;
+
+.toggle {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}

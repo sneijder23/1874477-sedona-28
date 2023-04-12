@@ -1,0 +1,16 @@
+@use "variables.scss" as v;
+
+.main-header {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background-color: v.$white;
+}
+
+.main-header__logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

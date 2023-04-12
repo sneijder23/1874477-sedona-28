@@ -1,0 +1,12 @@
+.map__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.map__mark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,41 @@
+@use "variables.scss" as v;
+@use "mixins.scss" as m;
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 45px 41px 35px 42px;
+  background-color: v.$white;
+}
+
+.modal__button {
+  @include m.font(700, 18px, v.$secondary, 26px);
+  font-family: v.$family;
+}
+
+.modal__button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 20px;
+  background-color: v.$concrete;
+}
+
+.modal__title {
+  @include m.font(700, 18px, v.$accent, 26px);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0 0 30px;
+}
+
+.modal__content {
+  @include m.font(400, 18px, v.$primary, 21px);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0 0 30px;
+}

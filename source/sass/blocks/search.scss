@@ -1,0 +1,20 @@
+@use "variables.scss" as v;
+@use "mixins.scss" as m;
+
+.search__wrapper {
+  margin: 0;
+  padding: 38px 18px 49px 18px;
+}
+
+.search__header-title {
+  font-size: 21px;
+  padding-bottom: 30px;
+}
+
+.search__header-content {
+  padding-bottom: 32px;
+}
+
+.search__button {
+  @include m.font (700, 21px, v.$secondary, 26px);
+}

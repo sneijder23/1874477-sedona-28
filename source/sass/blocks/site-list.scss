@@ -1,0 +1,28 @@
+@use "variables.scss" as v;
+@use "mixins.scss" as m;
+
+.site-list {
+  @include m.list-reset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-list__item {
+  background-color: v.$half-baked;
+  display: flex;
+  justify-content: center;
+  align-self: stretch;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.site-list__link {
+  @include m.font(700, 18px, v.$accent, 26px);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 14px;
+}
+
+.site-list__link--color-white {
+  color: v.$secondary;
+}

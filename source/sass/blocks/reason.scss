@@ -1,0 +1,119 @@
+@use "variables.scss" as v;
+@use "mixins.scss" as m;
+
+.reason__header {
+  width: 100%;
+  margin: 0;
+  padding: 32px 18px 0 18px;
+}
+
+.reason__header-title {
+  padding-bottom: 35px;
+}
+
+.reason__header-content {
+  padding-bottom: 16px;
+}
+
+.reason__triangle {
+  width: 100%;
+  height: 37px;
+  position: relative;
+  display: block;
+}
+
+.reason__triangle::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  right: -18px;
+  display: block;
+  width: calc(100% + 36px);
+  height: 100%;
+  background-color: v.$half-baked;
+  background-image: url("../img/header-trinagle-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 768px 37px;
+}
+
+.reason__list {
+  @include m.list-reset;
+  display: flex;
+  flex-direction: column;
+}
+
+.reason__item {
+  margin: 0;
+  padding: 0;
+}
+
+.reason__wrapper {
+  padding: 37px 0;
+  background-color: v.$half-baked;
+}
+
+.reason__item--background-grey {
+  position: relative;
+  margin: 0;
+  padding: 24px 26px;
+  background-color: v.$gallery;
+}
+
+.reason__item--background-grey:not(:nth-child(3))::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: v.$alto;
+}
+
+.reason__title {
+  @include m.font (700, 18px, v.$accent, 26px);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0 18px 11px 18px;
+}
+
+.reason__title--color-white {
+  color: v.$secondary;
+}
+
+.reason__title--mobile {
+  text-align: left;
+  padding-left: 47px;
+}
+
+.reason__content {
+  @include m.font (400, 14px, v.$primary, 21px);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0 18px;
+}
+
+.reason__content--color-white {
+  color: v.$secondary;
+}
+
+.reason__content--mobile {
+  text-align: left;
+  padding-left: 47px;
+}
+
+.reason__pagination {
+  @include m.font (400, 14px, v.$primary, 21px);
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0 5px 17px 0;
+}
+
+.reason__pagination--color-white {
+  color: v.$secondary;
+}
