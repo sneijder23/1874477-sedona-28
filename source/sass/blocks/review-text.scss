@@ -1,0 +1,36 @@
+@use "variables.scss" as v;
+@use "mixins.scss" as m;
+
+.review-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: v.$desktop-width) {
+    padding: 0 96px;
+  }
+}
+
+.review-text__input {
+  @include m.font (700, 18px, v.$black, 26px);
+  font-family: v.$family;
+  width: 100%;
+  height: auto;
+  min-height: 150px;
+  margin: 0;
+  margin-bottom: 56px;
+  padding: 16px;
+  border: none;
+  background-color: v.$concrete;
+  resize: none;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 48px;
+  }
+}
+
+.review-text__subtitle {
+  border: none;
+}

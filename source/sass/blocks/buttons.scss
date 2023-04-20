@@ -1,4 +1,4 @@
-@use "mixins";
+@use "mixins.scss";
 @include mixins.button;
 
 .toggle {
@@ -6,4 +6,8 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  background-image: url("../../img/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
 }

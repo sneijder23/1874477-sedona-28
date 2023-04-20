@@ -2,6 +2,7 @@
 @use "base.scss";
 // blocks
 @use "./blocks/buttons.scss";
+@use "./blocks/logo.scss";
 @use "./blocks/header.scss";
 @use "./blocks/main-header.scss";
 @use "./blocks/site-list.scss";
@@ -13,6 +14,7 @@
 @use "./blocks/presentation.scss";
 @use "./blocks/video.scss";
 @use "./blocks/reviews.scss";
+@use "./blocks/review-text.scss";
 @use "./blocks/form.scss";
 @use "./blocks/main-footer.scss";
 @use "./blocks/social-list.scss";

@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=width-device, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,30 +15,24 @@
       <a class="main-header__logo" href="#">
         <img class="main-header__logo-image" src="img/logo-sedona.svg" width="185" height="96" alt="Логотип Седона">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--nojs">
         <button class="main-nav__toggle toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" fill="none" viewBox="0 0 23 22">
-            <path class="toggle__icon" fill="#81B3D2" d="M22.9 0H0v4h22.9V0ZM22.9 9H0v4h22.9V9ZM22.9 18H0v4h22.9v-4Z" />
-          </svg>
         </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--color-white" href="#">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--color-white" href="catalog.html">Фото и видео</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--color-white" href="form.html">Форма отзыва</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--color-white"
-                href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--current" href="#">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="catalog.html">Фото и видео</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          </li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -51,62 +46,71 @@
       </div>
     </section>
     <section class="reason">
-        <header class="reason__header header">
-          <h2 class="reason__header-title header__title">СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!
-          </h2>
-          <p class="reason__header-content header__content">Рассмотрим 5 причин, по которым Седона круче, чем гранд
-            каньон!</p>
-          <span class="reason__triangle"></span>
-        </header>
-        <ul class="reason__list">
-          <li class="reason__item">
-            <div class="reason__wrapper">
-              <h3 class="reason__title reason__title--color-white">НАСТОЯЩИЙ ГОРОДОК</h3>
-              <span class="reason__pagination reason__pagination--color-white">— №1 —</span>
-              <p class="reason__content reason__content--color-white">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ
-                ЖИЗНЬ</p>
-            </div>
-            <img class="reason__image" src="img/photo-city@2x.jpg" width="320" height="260" alt="Домики на фоне гор">
-            <ul class="reason__list">
-              <li class="reason__item">
-                <h3 class="reason__title reason__title--mobile">Жилье</h3>
-                <p class="reason__content reason__content--mobile">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-              </li>
-              <li class="reason__item">
-                <h3 class="reason__title reason__title--mobile">Еда</h3>
-                <p class="reason__content reason__content--mobile">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, вы не разочаруетесь!</p>
-              </li>
-              <li class="reason__item">
-                <h3 class="reason__title reason__title--mobile">Сувениры</h3>
-                <p class="reason__content reason__content--mobile">Не только китайского, но и местного производства!</p>
-              </li>
-            </ul>
-          </li>
-          <li class="reason__item">
-            <div class="reason__wrapper">
-              <h3 class="reason__title reason__title--color-white">ТАМ ЕСТЬ Мост дьявола</h3>
-              <span class="reason__pagination reason__pagination--color-white">— №2 —</span>
-              <p class="reason__content reason__content--color-white">Да, по нему можно пройти! Если вы осмелитесь,
-                конечно</p>
-            </div>
-            <img class="reason__image" src="img/photo-bridge@2x.jpg" width="320" height="260" alt="Каньон, горы">
-          </li>
-          <li class="reason__item reason__item--background-grey">
-            <h3 class="reason__title">НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
-            <span class="reason__pagination">— №3 —</span>
-            <p class="reason__content">ВСЕ интересные места находятся очень близко</p>
-          </li>
-          <li class="reason__item reason__item--background-grey">
-            <h3 class="reason__title">КРАСИВАЯ ДОРОГА</h3>
-            <span class="reason__pagination">— №4 —</span>
-            <p class="reason__content">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
-          </li>
-          <li class="reason__item reason__item--background-grey">
-            <h3 class="reason__title">МАЛО ТУРИСТОВ</h3>
-            <span class="reason__pagination">— №5 —</span>
-            <p class="reason__content">Большинство едет в гранд каньон и толпится там</p>
-          </li>
-        </ul>
+      <header class="reason__header header">
+        <h2 class="reason__header-title header__title">СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!
+        </h2>
+        <p class="reason__header-content header__content">Рассмотрим 5 причин, по которым Седона круче, чем гранд
+          каньон!</p>
+      </header>
+      <ol class="reason__list">
+        <li class="reason__item reason__item--image">
+          <div class="reason__wrapper reason__wrapper--triangle">
+            <h3 class="reason__title reason__title--color-white">НАСТОЯЩИЙ ГОРОДОК</h3>
+            <span class="reason__pagination reason__pagination--color-white">— №1 —</span>
+            <p class="reason__content reason__content--color-white">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ
+              ЖИЗНЬ</p>
+          </div>
+          <picture class="reason__picture">
+            <source media="(min-width: 768px)" srcset="img/photo-city-desktop.jpg">
+            <img class="reason__image" src="img/photo-city-mobile.jpg" alt="Домики на фоне гор">
+          </picture>
+        </li>
+        <li class="reason__item">
+          <ul class="reason__list">
+            <li class="reason__item reason__item--column reason__item--house">
+              <h3 class="reason__title reason__title--mobile">Жилье</h3>
+              <p class="reason__content reason__content--mobile">Рекомендуем пожить в настоящем мотеле, все как в кино!
+              </p>
+            </li>
+            <li class="reason__item reason__item--column reason__item--burger">
+              <h3 class="reason__title reason__title--mobile">Еда</h3>
+              <p class="reason__content reason__content--mobile">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, вы не
+                разочаруетесь!</p>
+            </li>
+            <li class="reason__item reason__item--column reason__item--souvenir">
+              <h3 class="reason__title reason__title--mobile">Сувениры</h3>
+              <p class="reason__content reason__content--mobile">Не только китайского, но и местного производства!</p>
+            </li>
+          </ul>
+        </li>
+        <li class="reason__item reason__item--image reason__item--reverse">
+          <div class="reason__wrapper">
+            <h3 class="reason__title reason__title--color-white">ТАМ ЕСТЬ Мост&nbsp;дьявола</h3>
+            <span class="reason__pagination reason__pagination--color-white">— №2 —</span>
+            <p class="reason__content reason__content--color-white">Да, по нему можно пройти! Если вы осмелитесь,
+              конечно</p>
+          </div>
+          <picture class="reason__picture">
+            <source media="(min-width: 768px)" srcset="img/photo-bridge-desktop.jpg">
+            <img class="reason__image" src="img/photo-bridge-mobile.jpg" alt="Каньон, горы">
+          </picture>
+        </li>
+        <li class="reason__item reason__item--column reason__item--background-grey">
+          <h3 class="reason__title reason__title--pagination">НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
+          <span class="reason__pagination reason__pagination--position">— №3 —</span>
+          <p class="reason__content">ВСЕ интересные места находятся очень близко</p>
+        </li>
+        <li class="reason__item reason__item--column reason__item--background-grey">
+          <h3 class="reason__title reason__title--pagination">КРАСИВАЯ ДОРОГА</h3>
+          <span class="reason__pagination reason__pagination--position">— №4 —</span>
+          <p class="reason__content">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
+        </li>
+        <li class="reason__item reason__item--column reason__item--background-grey">
+          <h3 class="reason__title reason__title--pagination">МАЛО ТУРИСТОВ</h3>
+          <span class="reason__pagination reason__pagination--position">— №5 —</span>
+          <p class="reason__content">Большинство едет в гранд каньон и толпится там</p>
+        </li>
+      </ol>
     </section>
     <section class="search">
       <div class="search__wrapper">
@@ -197,7 +201,7 @@
     </div>
 
   </footer>
-
+  <script src="js/script.js"></script>
 </body>
 
 

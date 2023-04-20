@@ -2,29 +2,49 @@
 @use "mixins.scss" as m;
 
 .main-footer__wrapper {
-  max-width: 768px;
-  min-height: 235px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   padding: 33px 18px;
-  background-color: v.$white;
+
+  @media (min-width: v.$tablet-width) {
+    flex-direction: row;
+    padding: 36px 60px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 47px 120px;
+  }
+}
+
+.main-footer__social {
+  padding: 5px 5px 19px 5px;
+
+  @media (min-width: v.$tablet-width) {
+    padding-bottom: 5px;
+  }
+}
+
+.main-footer__copyright {
+  padding: 5px;
 }
 
 .meta {
-  display: flex;
-  align-items: center;
+  text-align: center;
+  padding: 5px;
+  padding-bottom: 25px;
+
+  @media (min-width: v.$tablet-width) {
+    padding-bottom: 5px;
+  }
 }
 
 .meta__link {
-  @include m.font (700, 21px, v.$accent, 26px);
+  @include m.font (700, 21px, v.$black, 26px);
   text-align: center;
   text-transform: uppercase;
-  text-decoration: none;
-  margin: 0;
-  padding: 5px 5px;
 }
 
 .meta__tag {
@@ -37,6 +57,7 @@
 }
 
 .copyright__text {
+  text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
   margin-right: 12px;

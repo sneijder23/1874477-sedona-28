@@ -2,64 +2,234 @@
 @use "mixins.scss" as m;
 
 .form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
   margin: 0;
   padding: 0 20px 22px 20px;
+  box-sizing: content-box;
+
+  @media (min-width: v.$tablet-width) {
+    max-width: 960px;
+    padding: 0 60px 64px 60px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 0 120px 64px 120px;
+  }
+}
+
+.form__inner {
+  @media (min-width: v.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 58px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    gap: 100px;
+  }
+}
+
+.form__inner-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+
+  @media (min-width: v.$tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 0 96px;
+  }
 }
 
 .group {
   position: relative;
   margin: 0;
-  padding: 24px 0;
+  padding: 0;
   border: none;
-}
 
-.group::before {
-  position: absolute;
-  top: -50px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: v.$mercury;
-  content: "";
+  &--position {
+    margin-bottom: 47px;
+  }
+
+  &--margin-contact {
+    margin-bottom: 43px;
+  }
+
+  &--position-checkbox {
+    display: flex;
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    &--position {
+      margin-bottom: 63px;
+    }
+
+    &--vertical-line:not(:last-child)::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -29px;
+      width: 1px;
+      height: 100%;
+      background-color: v.$mercury;
+      content: "";
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    &--vertical-line:not(:last-child)::before {
+      right: -50px;
+    }
+  }
 }
 
 .group__title {
-  @include m.font (700, 18px, v.$accent, 26px);
+  @include m.font (700, 18px, v.$black, 26px);
+  position: relative;
+  width: 100%;
   margin: 0;
-  padding: 34px 0 0;
+  padding: 0 5px 20px 5px;
   text-align: center;
   text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    top: -24px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: 1px;
+    background-color: v.$mercury;
+    content: "";
+  }
+}
+
+.group__title--vertical-line {
+  @media (min-width: v.$tablet-width) {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.group__title--line {
+  @media (min-width: v.$tablet-width) {
+    font-size: 21px;
+    width: 402px;
+
+    &::before {
+      position: absolute;
+      top: calc(50% - 10px);
+      left: -123px;
+      width: 123px;
+      height: 1px;
+      background-color: v.$mercury;
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      top: calc(50% - 10px);
+      right: -123px;
+      width: 123px;
+      height: 1px;
+      background-color: v.$mercury;
+      content: "";
+    }
+  }
 }
 
 .form-list {
   @include m.list-reset;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: v.$tablet-width) {
+    &--row {
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 0 16px 10px 36px;
+    }
+  }
 }
 
 .form-list__item {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  width: 100%;
+
+  @media (min-width: v.$tablet-width) {
+    &--check-list {
+      width: 280px;
+      margin: 0 16px 16px 0;
+    }
+
+    &--check-list:last-child {
+      margin-right: 0;
+    }
+
+    &--checkbox {
+      width: 224px;
+      margin: 0 32px 16px 0;
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    &--check-list {
+      width: 280px;
+    }
+
+    &--checkbox {
+      width: 100%;
+      max-width: 185px;
+      margin-right: 40px;
+    }
+
+    &--checkbox:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .form-list__subtitle {
   display: flex;
   align-items: center;
   text-transform: uppercase;
+  padding: 0 16px;
 }
 
 .form-list__subtitle--checkbox {
-  margin-bottom: 60px;
+  margin-bottom: 16px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .form-list__input {
-  @include m.font (700, 18px, v.$accent, 26px);
-  flex: 1;
+  @include m.font (700, 18px, v.$black, 26px);
+  width: 100%;
+  margin-bottom: 16px;
   padding: 16px 70px 16px 16px;
   background-color: v.$concrete;
   border: none;
+
+  @media (min-width: v.$desktop-width) {
+    width: 430px;
+  }
 }
 
 .form-list__input[type="tel"],
@@ -105,12 +275,25 @@
 }
 
 .form-list__label {
-  @include m.font (700, 18px, v.$accent, 26px);
+  @include m.font (700, 18px, v.$black, 26px);
   text-transform: none;
-  position: absolute;
+  position: relative;
   top: 0;
-  left: 46px;
+  left: 52px;
+  max-width: 90%;
   padding: 10px 5px 10px 16px;
+
+  @media (min-width: v.$tablet-width) {
+    position: relative;
+
+    &--radio-width {
+      max-width: calc(100% - 52px);
+    }
+
+    &--checkbox-width {
+      max-width: calc(100% - 30px);
+    }
+  }
 }
 
 .form-list__input[type="checkbox"]:checked + .form-list__mark {
@@ -130,25 +313,34 @@
   top: 15px;
   left: 15px;
   border-radius: 50%;
-  background-color: v.$primary;
+  background-color: v.$mine-shaft;
   content: "";
 }
 
-.review-text__input {
-  @include m.font (700, 18px, v.$accent, 26px);
-  font-family: v.$family;
-  margin: 0;
-  padding: 16px;
-}
-
 .form__submit {
-  @include m.font (700, 21px, v.$secondary, 26px);
+  @include m.font (700, 21px, v.$white, 26px);
   font-family: v.$family;
+  padding: 16px 49px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-right: auto;
+    padding: 16px 71px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 16px 101px;
+  }
 }
 
 .form__legend {
   font-size: 12px;
-  text-align: center;
+  text-align: right;
   text-transform: uppercase;
   opacity: 0.6;
+  padding: 3px 0 5px 5px;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: inherit;
+    opacity: 1;
+  }
 }

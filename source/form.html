@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=width-device, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,30 +15,24 @@
       <a class="main-header__logo" href="#">
         <img class="main-header__logo-image" src="img/logo-sedona.svg" width="185" height="96" alt="Логотип Седона">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--nojs">
         <button class="main-nav__toggle toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" fill="none" viewBox="0 0 23 22">
-            <path class="toggle__icon" fill="#81B3D2" d="M22.9 0H0v4h22.9V0ZM22.9 9H0v4h22.9V9ZM22.9 18H0v4h22.9v-4Z" />
-          </svg>
         </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--color-white" href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--color-white" href="catalog.html">Фото и видео</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--color-white" href="#">Форма отзыва</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--color-white"
-                href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="catalog.html">Фото и видео</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--current" href="#">Форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          </li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -45,7 +40,7 @@
   <main class="main-container">
 
     <section class="hero">
-      <div class="hero__wrapper">
+      <div class="hero__wrapper hero__wrapper--position">
         <h1 class="visually-hidden">Форма отзыва о Седоне</h1>
         <img class="hero__image-title" src="img/sedona.svg" width="229" height="39" alt="Добро пожаловать в Седону">
       </div>
@@ -54,118 +49,123 @@
       <div class="reviews__wrapper">
         <header class="reviews__header header">
           <h2 class="reviews__title header__title">Оставьте свой отзыв</h2>
-          <p class="header__content">Помогите нашим отелям стать лучше!
+          <p class="reviews__content header__content">Помогите нашим отелям стать лучше!
             оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </header>
         <form class="reviews__form form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="form__group group">
-            <legend class="group__title">Представьтесь:</legend>
-            <ul class="group__list form-list">
-              <li class="form-list__item">
-                <label class="form-list__subtitle" for="name">ИМЯ*:</label>
-                <input class="form-list__input" type="text" id="name" name="name" placeholder="Введите имя" required>
-              </li>
-              <li class="form-list__item">
-                <label class="form-list__subtitle" for="surname">ФАМИЛИЯ*:</label>
-                <input class="form-list__input" type="text" id="surname" name="surname" placeholder="Введите фамилию"
-                  required>
-              </li>
-              <li class="form-list__item">
-                <label class="form-list__subtitle" for="second-name">Отчество:</label>
-                <input class="form-list__input" type="text" id="second-name" name="second-name"
-                  placeholder="Введите отчество">
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="form__group group">
-            <legend class="group__title">Контактная информация:</legend>
-            <ul class="group__list form-list">
-              <li class="form-list__item">
-                <label class="form-list__subtitle" for="telephone">Контактный телефон*:</label>
-                <input class="form-list__input" type="tel" id="telephone" name="telephone"
-                  placeholder="Введите телефон">
-                <span class="form-list__icon"></span>
-              </li>
-              <li class="form-list__item">
-                <label class="form-list__subtitle" for="email">Электронная почта*:</label>
-                <input class="form-list__input" type="email" id="email" name="email" placeholder="Введите e-mail">
-                <span class="form-list__icon"></span>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="form__group group">
-            <legend class="group__title">Ваше Общее впечатление:</legend>
-            <ul class="group__list form-list">
-              <li class="form-list__item">
+          <div class="form__inner">
+            <fieldset class="form__group group group--position group--vertical-line">
+              <legend class="group__title group__title--vertical-line">Представьтесь:</legend>
+              <ul class="group__list form-list">
+                <li class="form-list__item">
+                  <label class="form-list__subtitle" for="name">ИМЯ*:</label>
+                  <input class="form-list__input" type="text" id="name" name="name" placeholder="Введите имя" required>
+                </li>
+                <li class="form-list__item">
+                  <label class="form-list__subtitle" for="surname">ФАМИЛИЯ*:</label>
+                  <input class="form-list__input" type="text" id="surname" name="surname" placeholder="Введите фамилию"
+                    required>
+                </li>
+                <li class="form-list__item">
+                  <label class="form-list__subtitle" for="second-name">Отчество:</label>
+                  <input class="form-list__input" type="text" id="second-name" name="second-name"
+                    placeholder="Введите отчество">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form__group group group--margin-contact group--vertical-line">
+              <legend class="group__title group__title--vertical-line">Контактная информация:</legend>
+              <ul class="group__list form-list">
+                <li class="form-list__item">
+                  <label class="form-list__subtitle" for="telephone">Контактный телефон*:</label>
+                  <input class="form-list__input" type="tel" id="telephone" name="telephone"
+                    placeholder="Введите телефон">
+                  <span class="form-list__icon"></span>
+                </li>
+                <li class="form-list__item">
+                  <label class="form-list__subtitle" for="email">Электронная почта*:</label>
+                  <input class="form-list__input" type="email" id="email" name="email" placeholder="Введите e-mail">
+                  <span class="form-list__icon"></span>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <fieldset class="form__group group group--position-checkbox">
+            <legend class="group__title group__title--line">Ваше Общее впечатление:</legend>
+            <ul class="group__list form-list form-list--row">
+              <li class="form-list__item form-list__item--check-list">
                 <label class="form-list__subtitle form-list__subtitle--checkbox">
                   <input class="visually-hidden form-list__input" type="radio" name="impression" value="good" checked>
                   <span class="form-list__mark"></span>
-                  <span class="form-list__label">Скорее положительное</span>
+                  <span class="form-list__label form-list__label--radio-width">Скорее положительное</span>
                 </label>
               </li>
-              <li class="form-list__item">
+              <li class="form-list__item form-list__item--check-list">
                 <label class="form-list__subtitle form-list__subtitle--checkbox">
                   <input class="visually-hidden form-list__input" type="radio" name="impression" value="bad">
                   <span class="form-list__mark"></span>
-                  <span class="form-list__label">Скорее отрицательное</span>
+                  <span class="form-list__label form-list__label--radio-width">Скорее отрицательное</span>
                 </label>
               </li>
-              <li class="form-list__item">
+              <li class="form-list__item form-list__item--check-list">
                 <label class="form-list__subtitle form-list__subtitle--checkbox">
                   <input class="visually-hidden form-list__input" type="radio" name="impression" value="uncertainty">
                   <span class="form-list__mark"></span>
-                  <span class="form-list__label">Затрудняюсь ответить</span>
+                  <span class="form-list__label form-list__label--radio-width">Затрудняюсь ответить</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__group group">
-            <legend class="group__title">посещенные достопримечательности:</legend>
-            <ul class="group__list form-list">
-              <li class="form-list__item">
+          <fieldset class="form__group group group--position-checkbox">
+            <legend class="group__title group__title--line">посещенные<br>достопримечательности:</legend>
+            <ul class="group__list form-list form-list--row">
+              <li class="form-list__item form-list__item--checkbox">
                 <label class="form-list__subtitle form-list__subtitle--checkbox">
                   <input class="visually-hidden form-list__input" type="checkbox" name="place" value="devils bridge"
                     checked>
                   <span class="form-list__mark"></span>
-                  <span class="form-list__label">Мост Дьявола</span>
+                  <span class="form-list__label form-list__label--checkbox-width">Мост Дьявола</span>
                 </label>
               </li>
-              <li class="form-list__item">
+              <li class="form-list__item form-list__item--checkbox">
                 <label class="form-list__subtitle form-list__subtitle--checkbox">
                   <input class="visually-hidden form-list__input" type="checkbox" name="place" value="Mount Bell"
                     checked>
                   <span class="form-list__mark"></span>
-                  <span class="form-list__label">Гора-Колокол</span>
+                  <span class="form-list__label form-list__label--checkbox-width">Гора-Колокол</span>
                 </label>
               </li>
-              <li class="form-list__item">
+              <li class="form-list__item form-list__item--checkbox">
                 <label class="form-list__subtitle form-list__subtitle--checkbox">
                   <input class="visually-hidden form-list__input" type="checkbox" name="place" value="slide park"
                     checked>
                   <span class="form-list__mark"></span>
-                  <span class="form-list__label">Слайд-парк</span>
+                  <span class="form-list__label form-list__label--checkbox-width">Слайд-парк</span>
                 </label>
               </li>
-              <li class="form-list__item">
+              <li class="form-list__item form-list__item--checkbox">
                 <label class="form-list__subtitle form-list__subtitle--checkbox">
                   <input class="visually-hidden form-list__input" type="checkbox" name="place" value="red rocks">
                   <span class="form-list__mark"></span>
-                  <span class="form-list__label">Красные скалы</span>
+                  <span class="form-list__label form-list__label--checkbox-width">Красные скалы</span>
                 </label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="form__group group">
-            <legend class="group__title">Опишите свои эмоции:</legend>
+            <legend class="group__title group__title--line">Опишите свои эмоции:</legend>
             <div class="group__review-text review-text">
-              <label class="review-text__subtitle">
-                <textarea class="review-text__input" name="review"
-                  placeholder="Опишите подробно все свои восторги"></textarea>
+              <label class="review-text__subtitle" for="review">
+                <span class="visually-hidden">Впечатления от поездки</span>
               </label>
+              <textarea class="review-text__input" name="review" id="review"
+                placeholder="Опишите подробно все свои восторги"></textarea>
             </div>
           </fieldset>
-          <button class="form__submit button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
-          <small class="form__legend">* — обязательные поля</small>
+          <div class="form__inner-bottom">
+            <button class="form__submit button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+            <small class="form__legend">* — обязательные поля</small>
+          </div>
         </form>
       </div>
     </section>
@@ -254,7 +254,7 @@
       </div>
     </div>
   </div>
-
+  <script src="js/script.js"></script>
 </body>
 
 </html>

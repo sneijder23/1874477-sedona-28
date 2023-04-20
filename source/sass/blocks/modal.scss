@@ -12,7 +12,7 @@
 }
 
 .modal__button {
-  @include m.font(700, 18px, v.$secondary, 26px);
+  @include m.font(700, 18px, v.$white, 26px);
   font-family: v.$family;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .modal__title {
-  @include m.font(700, 18px, v.$accent, 26px);
+  @include m.font(700, 18px, v.$black, 26px);
   text-align: center;
   text-transform: uppercase;
   margin: 0;
@@ -33,7 +33,7 @@
 }
 
 .modal__content {
-  @include m.font(400, 18px, v.$primary, 21px);
+  @include m.font(400, 18px, v.$mine-shaft, 21px);
   text-align: center;
   text-transform: uppercase;
   margin: 0;

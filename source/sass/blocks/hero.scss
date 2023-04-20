@@ -1,19 +1,47 @@
 @use "variables.scss" as v;
 
 .hero {
+  width: 100%;
   background-color: v.$wedgewood;
-  background-image:
-    url("../img/hero-triangle.svg"),
-    url("../img/hero-background-mobile.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: center bottom, center;
-  background-size: cover, cover;
+  background-image: url("../img/hero-background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-width: v.$tablet-width) {
+    background-image: url("../img/hero-background-desktop.jpg");
+  }
 }
 
 .hero__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 90px 18px 57px 18px;
   margin: 0;
+  padding: 90px 18px 85px 18px;
+  background-image: url("../img/hero-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+
+  &--position {
+    padding-top: 52px;
+    padding-bottom: 67px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    padding-top: 95px;
+    padding-bottom: 117px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding-top: 101px;
+    padding-bottom: 120px;
+  }
+}
+
+.hero__image-title {
+  @media (min-width: v.$tablet-width) {
+    width: 457px;
+    height: 78;
+  }
 }
