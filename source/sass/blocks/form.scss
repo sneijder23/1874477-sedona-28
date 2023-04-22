@@ -24,10 +24,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  }
-
-  @media (min-width: v.$desktop-width) {
-    padding: 0 96px;
+    max-width: 768px;
+    margin: 0 auto;
   }
 }
 
