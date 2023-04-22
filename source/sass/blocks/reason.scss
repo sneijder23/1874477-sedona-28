@@ -49,42 +49,29 @@
     padding: 31px 0 46px 0;
   }
 
-  &--house::before {
+  &--icon::before {
     content: "";
     position: absolute;
     top: 23px;
     left: 18px;
     width: 40px;
     height: 40px;
-    background-image: url("../img/icon-house.svg");
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  &--house::before {
+    background-image: url("../img/icon-house.svg");
     background-size: 40px 40px;
   }
 
   &--burger::before {
-    content: "";
-    position: absolute;
-    top: 23px;
-    left: 18px;
-    width: 40px;
-    height: 40px;
     background-image: url("../img/icon-burger.svg");
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: 40px 35px;
   }
 
   &--souvenir::before {
-    content: "";
-    position: absolute;
-    top: 23px;
-    left: 18px;
-    width: 40px;
-    height: 40px;
     background-image: url("../img/icon-souvenir.svg");
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: 32px 38px;
   }
 
@@ -116,42 +103,25 @@
       justify-content: flex-start;
     }
 
-    &--house::before {
-      content: "";
-      position: absolute;
+    &--icon::before {
       top: 60px;
       left: 0;
       width: 100%;
       height: 72px;
+    }
+
+    &--house::before {
       background-image: url("../img/icon-house.svg");
-      background-repeat: no-repeat;
-      background-position: center;
       background-size: 77px 72px;
     }
 
     &--burger::before {
-      content: "";
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      height: 72px;
       background-image: url("../img/icon-burger.svg");
-      background-repeat: no-repeat;
-      background-position: center;
       background-size: 80px 68px;
     }
 
     &--souvenir::before {
-      content: "";
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      height: 72px;
       background-image: url("../img/icon-souvenir.svg");
-      background-repeat: no-repeat;
-      background-position: center;
       background-size: 66px 75px;
     }
   }

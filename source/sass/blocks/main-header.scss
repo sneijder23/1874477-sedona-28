@@ -24,8 +24,15 @@
   width: 23px;
   height: 22px;
   margin: 17px 18px 17px 10px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  background-image: url("../../img/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  cursor: pointer;
 }
-
 
 .main-nav {
   display: flex;

@@ -1,0 +1,15 @@
+@use "variables.scss" as v;
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 12px 12px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: v.$white;
+  background-color: v.$half-baked;
+  border: none;
+  cursor: pointer;
+}
