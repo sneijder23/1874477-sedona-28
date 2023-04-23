@@ -14,11 +14,17 @@
   }
 }
 
+.gallery__content {
+  @media (min-width: v.$tablet-width) {
+    font-size: 14px;
+  }
+}
+
 .gallery__content br {
   display: none;
 
   @media (min-width: v.$tablet-width) {
-    display: contents;
+    display: block;
   }
 }
 
