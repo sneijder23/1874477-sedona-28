@@ -46,6 +46,14 @@
   }
 }
 
+.search__header-content br {
+  display: none;
+
+  @media (min-width: v.$tablet-width) {
+    display: block;
+  }
+}
+
 .search__button {
   @include m.font (700, 21px, v.$white, 26px);
   padding: 16px 12px;

@@ -250,19 +250,23 @@
 
   &--check-list {
     width: 280px;
+    margin-bottom: 16px;
   }
 
   &--checkbox {
     width: 280px;
+    margin-bottom: 16px;
   }
 
   @media (min-width: v.$desktop-width) {
     &--check-list {
       width: auto;
+      margin-bottom: 0;
     }
 
     &--checkbox {
       width: auto;
+      margin-bottom: 0;
     }
   }
 }
