@@ -28,7 +28,9 @@
   resize: none;
 
   @media (min-width: v.$tablet-width) {
-    margin-bottom: 48px;
+    min-height: 160px;
+    margin-bottom: 47px;
+    padding-top: 18px;
   }
 }
 

@@ -14,7 +14,7 @@
 
   @media (min-width: v.$tablet-width) {
     max-width: 768px;
-    padding: 62px 155px 55px 155px;
+    padding: 60px 155px 55px 155px;
   }
 
   @media (min-width: v.$desktop-width) {
@@ -25,17 +25,28 @@
 
 .search__header-title {
   font-size: 21px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding-bottom: 33px;
+  }
 }
 
 .search__header-content {
   padding-bottom: 32px;
 
   @media (min-width: v.$tablet-width) {
-    padding-bottom: 44px;
+    font-size: 14px;
+    padding-bottom: 45px;
   }
 }
 
 .search__button {
   @include m.font (700, 21px, v.$white, 26px);
+  padding: 16px 12px;
 }

@@ -29,13 +29,23 @@
   }
 
   @media (min-width: v.$tablet-width) {
-    padding-top: 95px;
-    padding-bottom: 117px;
+    padding-top: 77px;
+    padding-bottom: 94px;
+
+    &--position {
+      padding-top: 95px;
+      padding-bottom: 117px;
+    }
   }
 
   @media (min-width: v.$desktop-width) {
-    padding-top: 101px;
-    padding-bottom: 120px;
+    padding-top: 78px;
+    padding-bottom: 93px;
+
+    &--position {
+      padding-top: 101px;
+      padding-bottom: 122px;
+    }
   }
 }
 
