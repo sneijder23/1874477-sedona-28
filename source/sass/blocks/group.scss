@@ -1,0 +1,160 @@
+@use "variables.scss" as v;
+@use "mixins.scss" as m;
+
+.group {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  &--position {
+    margin-bottom: 47px;
+  }
+
+  &--margin-contact {
+    margin-bottom: 42px;
+  }
+
+  &--position-checklist {
+    margin-bottom: 49px;
+  }
+
+  &--position-checkbox {
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    &--position {
+      margin-bottom: 49px;
+    }
+
+    &--vertical-line:not(:last-child)::before {
+      position: absolute;
+      top: -60px;
+      bottom: 0;
+      right: -29px;
+      width: 1px;
+      height: calc(100% + 60px);
+      background-color: v.$mercury;
+      content: "";
+    }
+
+    &--position-checkbox {
+      margin-bottom: 41px;
+    }
+
+    &--position-checklist {
+      margin-bottom: 52px;
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    &--position {
+      margin-bottom: 56px;
+    }
+
+    &--vertical-line:not(:last-child)::before {
+      right: -50px;
+    }
+
+    &--position-checkbox {
+      margin-bottom: 56px;
+    }
+
+    &--position-checklist {
+      margin-bottom: 56px;
+    }
+  }
+}
+
+.group__title {
+  @include m.font (700, 18px, v.$black, 26px);
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0 5px 20px 5px;
+
+
+  &::before {
+    position: absolute;
+    top: -24px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: 1px;
+    background-color: v.$mercury;
+    content: "";
+  }
+
+  @media (min-width: v.$tablet-width) {
+    padding-bottom: 25px;
+
+    &--vertical-line::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    font-size: 21px;
+    padding-bottom: 29px;
+  }
+}
+
+
+.group__title--line {
+  @media (min-width: v.$tablet-width) {
+    font-size: 21px;
+    width: 402px;
+    margin: 0 auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 14px);
+      left: 402px;
+      width: 123px;
+      height: 1px;
+      background-color: v.$mercury;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 14px);
+      right: 402px;
+      width: 123px;
+      height: 1px;
+      background-color: v.$mercury;
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    & {
+      padding-bottom: 45px;
+    }
+
+    &::before {
+      top: calc(50% - 24px);
+      left: -280px;
+      width: 280px;
+    }
+
+    &::after {
+      top: calc(50% - 24px);
+      right: -280px;
+      width: 280px;
+    }
+  }
+}
+
+.group__review-text {
+  @media (min-width: v.$tablet-width) {
+    margin-top: 2px;
+    margin-bottom: 1px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-top: -18px;
+  }
+}

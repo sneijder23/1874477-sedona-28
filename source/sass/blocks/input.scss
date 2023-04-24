@@ -1,0 +1,46 @@
+@use "variables.scss" as v;
+@use "mixins.scss" as m;
+
+.input {
+  @include m.font (700, 18px, v.$black, 26px);
+  margin: 0;
+  padding: 0;
+  padding-right: 58px;
+  background-color: v.$concrete;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: v.$mercury;
+  }
+
+  &:active {
+    background-color: v.$white;
+    outline: 4px solid v.$mercury;
+    outline-offset: -4px;
+  }
+
+  &::placeholder {
+    color: v.$black;
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    background-color: v.$crayola-crystal;
+  }
+
+  &--text {
+    width: 100%;
+    padding: 16px;
+  }
+
+  &--icon {
+    width: 100%;
+    padding: 16px;
+    padding-right: 63px;
+
+    &:focus {
+      outline-offset: 1px;
+    }
+  }
+}

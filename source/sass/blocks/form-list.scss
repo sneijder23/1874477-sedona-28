@@ -1,0 +1,164 @@
+@use "variables.scss" as v;
+@use "mixins.scss" as m;
+
+.form-list {
+  @include m.list-reset;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+
+  &--check-list {
+    grid-template-columns: 280px;
+    justify-content: center;
+  }
+
+  &--checkbox-list {
+    grid-template-columns: 280px;
+    justify-content: center;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    &--check-list {
+      grid-template-columns: repeat(2, auto);
+      justify-content: center;
+      gap: 16px;
+    }
+
+    &--checkbox-list {
+      grid-template-columns: repeat(2, auto);
+      justify-content: center;
+      gap: 14px 32px;
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    &--check-list {
+      grid-template-columns: repeat(3, auto);
+      justify-content: stretch;
+      gap: 16px 28px;
+      margin: 0 53px;
+      margin-bottom: 20px;
+    }
+
+    &--checkbox-list {
+      grid-template-columns: repeat(4, auto);
+      gap: 16px 30px;
+      justify-content: stretch;
+      margin: 0 44px;
+      padding-top: 15px;
+      padding-bottom: 28px;
+    }
+  }
+}
+
+.form-list__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  &--telephone {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 58px;
+      height: 58px;
+      background-color: v.$light-gray;
+      background-image: url("../img/phone.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 18px 18px;
+    }
+  }
+
+  &--email {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 58px;
+      height: 58px;
+      background-color: v.$light-gray;
+      background-image: url("../img/email.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 16px 12px;
+    }
+  }
+}
+
+.form-list__subtitle {
+  text-transform: uppercase;
+  padding: 0 16px;
+
+  &--font {
+    @include m.font(700, 18px, v.$black, 26px);
+  }
+
+  &--radio {
+    text-transform: none;
+    padding: 10px;
+    padding-left: 62px;
+  }
+
+  &--checkbox {
+    text-transform: none;
+    padding: 10px;
+    padding-left: 62px;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    &--radio {
+      padding: 10px;
+      padding-left: 62px;
+    }
+
+    &--checkbox {
+      padding: 10px;
+      padding-left: 62px;
+    }
+  }
+}
+
+
+.form-list__mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  background-color: v.$concrete;
+}
+
+.form-list__input[type="checkbox"]:checked + .form-list__mark {
+  background-image: url("../img/checked.svg");
+  background-repeat: no-repeat;
+  background-position: 12px 15px;
+}
+
+.form-list__input[type="radio"] + .form-list__mark {
+  border-radius: 50%;
+}
+
+.form-list__input[type="radio"]:checked + .form-list__mark::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  border-radius: 50%;
+  background-color: v.$mine-shaft;
+}
+
+.form-list__input:focus ~ .form-list__mark,
+.form-list__input:hover ~ .form-list__mark {
+  background-color: v.$mercury;
+}
+
+.form-list__input:disabled ~ .form-list__mark {
+  opacity: 0.3;
+  background-color: v.$crayola-crystal;
+}

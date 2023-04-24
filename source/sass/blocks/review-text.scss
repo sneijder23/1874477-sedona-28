@@ -18,6 +18,7 @@
   @include m.font (700, 18px, v.$black, 26px);
   font-family: v.$family;
   width: 100%;
+  max-width: 648px;
   height: auto;
   min-height: 150px;
   margin: 0;
@@ -28,12 +29,9 @@
   resize: none;
 
   @media (min-width: v.$tablet-width) {
+    max-width: 768px;
     min-height: 160px;
     margin-bottom: 47px;
     padding-top: 18px;
   }
-}
-
-.review-text__subtitle {
-  border: none;
 }
