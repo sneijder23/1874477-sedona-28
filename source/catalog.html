@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=width-device, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,33 +12,27 @@
 
   <header>
     <div class="main-header">
-      <a class="main-header__logo" href="#">
+      <a class="main-header__logo" href="index.html">
         <img class="main-header__logo-image" src="img/logo-sedona.svg" width="185" height="96" alt="Логотип Седона">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--nojs">
         <button class="main-nav__toggle toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" fill="none" viewBox="0 0 23 22">
-            <path class="toggle__icon" fill="#81B3D2" d="M22.9 0H0v4h22.9V0ZM22.9 9H0v4h22.9V9ZM22.9 18H0v4h22.9v-4Z" />
-          </svg>
         </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--color-white" href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--color-white" href="#">Фото и видео</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--color-white" href="form.html">Форма отзыва</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--color-white"
-                href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link " href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--current" href="#">Фото и видео</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          </li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -45,45 +40,63 @@
   <main class="main-container">
 
     <section class="hero">
-      <div class="hero__wrapper">
+      <div class="hero__wrapper hero__wrapper--position">
         <h1 class="visually-hidden">Галерея Седоны</h1>
         <img class="hero__image-title" src="img/sedona.svg" width="229" height="39" alt="Добро пожаловать в Седону">
       </div>
     </section>
     <section class="gallery">
-      <div class="gallery__wrapper">
-        <header class="gallery__header header">
-          <h2 class="gallery__title header__title">Фото и видео</h2>
-          <p class="header__content">Не можете решиться на путешествие из-за курса?
-            Фотографии помогут вам забыть о политике и экономике.</p>
-        </header>
-        <ul class="gallery__list">
-          <li class="gallery__item">
-            <img class="gallery__image" src="img/photo-1-mobile@2x.jpg" width="280" height="280" alt="Дорога и закат">
-            <h3 class="gallery__image-title">Неродные просторы</h3>
+      <header class="gallery__header header">
+        <h2 class="gallery__title header__title">Фото и видео</h2>
+        <p class="gallery__content header__content">Не можете решиться на путешествие из-за курса?<br>
+          Фотографии помогут вам забыть о политике и экономике.</p>
+      </header>
+      <ul class="gallery__list">
+        <li class="gallery__item gallery__item--main">
+          <picture class="gallery__picture">
+            <source media="(min-width: 768px)" srcset="img/photo-1-desktop.jpg">
+            <img class="gallery__image gallery__image--main" src="img/photo-1-mobile@2x.jpg" alt="Дорога и закат">
+          </picture>
+          <div class="gallery__inner gallery__inner--main">
+            <h3 class="gallery__image-title gallery__image-title--main">Неродные просторы</h3>
             <p class="gallery__image-author">Автор фото: Борис</p>
-            <span class="gallery__image-likes">1350</span>
-          </li>
-          <li class="gallery__item">
-            <img class="gallery__image" src="img/photo-2-mobile@2x.jpg" width="280" height="280" alt="Растение и горы">
+            <span class="gallery__image-likes" tabindex="0">1350</span>
+          </div>
+        </li>
+        <li class="gallery__item">
+          <picture class="gallery__picture">
+            <source media="(min-width: 768px)" srcset="img/photo-2-desktop.jpg">
+            <img class="gallery__image" src="img/photo-2-mobile@2x.jpg" alt="Растение и горы">
+          </picture>
+          <div class="gallery__inner">
             <h3 class="gallery__image-title">Местная растительность</h3>
             <p class="gallery__image-author">Автор фото: Сергей</p>
-            <span class="gallery__image-likes">143</span>
-          </li>
-          <li class="gallery__item">
-            <img class="gallery__image" src="img/photo-3-mobile@2x.jpg" width="280" height="280" alt="Трасса в лесу">
+            <span class="gallery__image-likes" tabindex="0">143</span>
+          </div>
+        </li>
+        <li class="gallery__item gallery__item--background">
+          <picture class="gallery__picture">
+            <source media="(min-width: 768px)" srcset="img/photo-3-desktop.jpg">
+            <img class="gallery__image" src="img/photo-3-mobile@2x.jpg" alt="Трасса в лесу">
+          </picture>
+          <div class="gallery__inner">
             <h3 class="gallery__image-title">Дорога на север</h3>
             <p class="gallery__image-author">Автор фото: Петр</p>
-            <span class="gallery__image-likes">96</span>
-          </li>
-          <li class="gallery__item">
-            <img class="gallery__image" src="img/photo-4-mobile@2x.jpg" width="280" height="280" alt="Скалистый мост">
+            <span class="gallery__image-likes" tabindex="0">96</span>
+          </div>
+        </li>
+        <li class="gallery__item">
+          <picture class="gallery__picture">
+            <source media="(min-width: 768px)" srcset="img/photo-4-desktop.jpg">
+            <img class="gallery__image" src="img/photo-4-mobile@2x.jpg" alt="Скалистый мост">
+          </picture>
+          <div class="gallery__inner">
             <h3 class="gallery__image-title">Мост дьявола</h3>
             <p class="gallery__image-author">Автор фото: Антон</p>
-            <span class="gallery__image-likes">254</span>
-          </li>
-        </ul>
-      </div>
+            <span class="gallery__image-likes" tabindex="0">254</span>
+          </div>
+        </li>
+      </ul>
     </section>
     <section class="presentation">
       <div class="presentation__wrapper">
@@ -92,6 +105,7 @@
           <p class="presentation__header-content header__content">Смотрите видеопрезентацию и скорее за билетами,
             пока они не подорожали в очередной раз!</p>
         </header>
+        </div>
         <div class="presentation__video video">
           <a class="video__link" href="#">
             <picture>
@@ -105,7 +119,6 @@
             </svg>
           </button>
         </div>
-      </div>
     </section>
 
   </main>
@@ -173,8 +186,7 @@
     </div>
 
   </footer>
-
-
+  <script src="js/script.js"></script>
 </body>
 
 </html>

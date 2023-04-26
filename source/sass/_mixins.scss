@@ -14,28 +14,3 @@
   padding: 0;
   list-style-type: none;
 }
-
-@mixin center-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@mixin wrapper-block {
-  margin: 0;
-  padding: 24px 18px;
-}
-
-@mixin button {
-  .button {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 12px 12px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: v.$secondary;
-    background-color: v.$half-baked;
-    border: none;
-  }
-}

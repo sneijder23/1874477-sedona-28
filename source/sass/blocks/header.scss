@@ -6,27 +6,35 @@
 }
 
 .header__title {
-  @include m.font (700, 18px, v.$accent, 26px);
+  @include m.font (700, 18px, v.$black, 26px);
   text-align: center;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .header__title--color-white {
-  color: v.$secondary;
+  color: v.$white;
 }
 
 .header__content {
-  @include m.font (400, 14px, v.$primary, 21px);
+  @include m.font (400, 14px, v.$mine-shaft, 21px);
   text-align: center;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 18px;
+  }
 }
 
 .header__content--color-white {
-  color: v.$secondary;
+  color: v.$white;
 }
 
 .header__subtitle {
@@ -37,5 +45,5 @@
 }
 
 .header__subtitle--color-white {
-  color: v.$secondary;
+  color: v.$white;
 }

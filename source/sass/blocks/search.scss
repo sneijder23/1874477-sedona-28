@@ -1,20 +1,60 @@
 @use "variables.scss" as v;
 @use "mixins.scss" as m;
 
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .search__wrapper {
+  max-width: 494px;
   margin: 0;
   padding: 38px 18px 49px 18px;
+
+  @media (min-width: v.$tablet-width) {
+    max-width: 768px;
+    padding: 60px 155px 55px 155px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    max-width: 1200px;
+    padding: 60px 371px 66px 371px;
+  }
 }
 
 .search__header-title {
   font-size: 21px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding-bottom: 33px;
+  }
 }
 
 .search__header-content {
   padding-bottom: 32px;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 14px;
+    padding-bottom: 45px;
+  }
+}
+
+.search__header-content br {
+  display: none;
+
+  @media (min-width: v.$tablet-width) {
+    display: block;
+  }
 }
 
 .search__button {
-  @include m.font (700, 21px, v.$secondary, 26px);
+  @include m.font (700, 21px, v.$white, 26px);
+  padding: 16px 12px;
 }

@@ -1,7 +1,18 @@
+@use "variables.scss" as v;
+
 .video {
+  width: 100%;
   position: relative;
-  margin: 0;
-  padding: 0;
+}
+
+.video__media {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+
+  @media (min-width: v.$tablet-width) {
+    height: 500px;
+  }
 }
 
 .video__button {
@@ -10,7 +21,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
-  padding: 0;
+  padding: 10px;
   border: none;
   background-color: transparent;
+  z-index: 1;
+  cursor: pointer;
 }

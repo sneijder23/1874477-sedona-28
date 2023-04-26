@@ -1,8 +1,48 @@
+@use "variables.scss" as v;
+
+.reviews {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding: 0 20px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 0 60px 64px 60px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 0 120px 63px 120px;
+  }
+}
+
 .reviews__header {
   margin: 0;
-  padding: 36px 20px 28px 20px;
+  padding: 36px 0 53px 0;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 64px 106px 108px 106px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 115px 262px 68px 262px;
+  }
 }
 
 .reviews__title {
   padding-bottom: 24px;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 30px;
+    padding-bottom: 22px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding-bottom: 31px;
+  }
+}
+
+.reviews__content {
+  @media (min-width: v.$tablet-width) {
+    font-size: 14px;
+  }
 }

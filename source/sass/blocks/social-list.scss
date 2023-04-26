@@ -3,12 +3,16 @@
 .social__list {
   @include m.list-reset;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  max-width: 170px;
 }
 
 .social__item {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 6px;
 }
 
 .social__item:not(:last-child) {
@@ -16,6 +20,7 @@
 }
 
 .social__link {
+  min-width: 48px;
   min-height: 48px;
   display: flex;
   align-items: center;

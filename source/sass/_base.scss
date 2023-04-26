@@ -1,5 +1,5 @@
-@use "variables" as v;
-@use "mixins" as m;
+@use "variables.scss" as v;
+@use "mixins.scss" as m;
 
 
 *,
@@ -10,6 +10,7 @@
 
 html {
   height: 100%;
+  background-color: v.$concrete;
 }
 
 img {
@@ -22,13 +23,20 @@ a {
 }
 
 body {
-  @include m.font(400, 14px, v.$primary, 21px);
+  @include m.font(400, 14px, v.$mine-shaft, 21px);
   font-family: v.$family;
+  min-width: 320px;
+  max-width: v.$desktop-width;
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  background-color: v.$white;
+
+  @media (min-width: v.$desktop-width) {
+    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  }
 }
 
 
@@ -45,7 +53,5 @@ body {
 
 .main-container {
   min-height: 100%;
-  margin: 0 auto;
   flex-grow: 1;
-  background-color: v.$white;
 }

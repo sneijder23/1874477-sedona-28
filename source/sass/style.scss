@@ -1,7 +1,7 @@
 // base styles
 @use "base.scss";
 // blocks
-@use "./blocks/buttons.scss";
+@use "./blocks/button.scss";
 @use "./blocks/header.scss";
 @use "./blocks/main-header.scss";
 @use "./blocks/site-list.scss";
@@ -13,7 +13,11 @@
 @use "./blocks/presentation.scss";
 @use "./blocks/video.scss";
 @use "./blocks/reviews.scss";
+@use "./blocks/review-text.scss";
 @use "./blocks/form.scss";
+@use "./blocks/group.scss";
+@use "./blocks/form-list.scss";
+@use "./blocks/input.scss";
 @use "./blocks/main-footer.scss";
 @use "./blocks/social-list.scss";
 @use "./blocks/modal.scss";
