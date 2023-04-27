@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=width-device, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body>
@@ -13,7 +17,8 @@
   <header>
     <div class="main-header">
       <a class="main-header__logo" href="index.html">
-        <img class="main-header__logo-image" src="img/logo-sedona.svg" width="185" height="96" alt="Логотип Седона">
+        <img class="main-header__logo-image" src="img/logos/city-sedona.svg" width="185" height="96"
+          alt="Логотип Седона">
       </a>
       <nav class="main-nav main-nav--nojs">
         <button class="main-nav__toggle toggle" type="button">
@@ -39,11 +44,9 @@
 
   <main class="main-container">
 
-    <section class="hero">
-      <div class="hero__wrapper hero__wrapper--position">
-        <h1 class="visually-hidden">Форма отзыва о Седоне</h1>
-        <img class="hero__image-title" src="img/sedona.svg" width="229" height="39" alt="Добро пожаловать в Седону">
-      </div>
+    <section class="hero hero--secondary">
+      <h1 class="visually-hidden">Форма отзыва о Седоне</h1>
+      <img class="hero__image-title" src="img/logos/sedona.svg" width="229" height="39" alt="Добро пожаловать в Седону">
     </section>
     <section class="reviews">
       <header class="reviews__header header">
@@ -58,8 +61,8 @@
             <ul class="group__list form-list">
               <li class="form-list__item">
                 <label class="form-list__subtitle" for="name">ИМЯ*:</label>
-                <input class="form-list__input input input--text" type="text" id="name" name="name" placeholder="Введите имя"
-                  required>
+                <input class="form-list__input input input--text" type="text" id="name" name="name"
+                  placeholder="Введите имя" required>
               </li>
               <li class="form-list__item">
                 <label class="form-list__subtitle" for="surname">ФАМИЛИЯ*:</label>
@@ -79,11 +82,12 @@
               <li class="form-list__item form-list__item--telephone">
                 <label class="form-list__subtitle" for="telephone">Контактный телефон*:</label>
                 <input class="form-list__input input input--icon" type="tel" id="telephone" name="telephone"
-                  placeholder="Введите телефон">
+                  placeholder="Введите телефон" required>
               </li>
               <li class="form-list__item form-list__item--email">
                 <label class="form-list__subtitle" for="email">Электронная почта*:</label>
-                <input class="form-list__input input input--icon" type="email" id="email" name="email" placeholder="Введите e-mail">
+                <input class="form-list__input input input--icon" type="email" id="email" name="email"
+                  placeholder="Введите e-mail" required>
               </li>
             </ul>
           </fieldset>
@@ -231,24 +235,25 @@
 
   </footer>
 
-  <div class="modal__container">
-    <div class="form__modal modal modal--error">
-      <h2 class="modal__title">ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
-      <p class="modal__content">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="modal__button button">ок</button>
+  <div class="modal__container modal__container--error " aria-hidden="true">
+    <div class="form__modal">
+      <h2 class="modal__title">ЧТО-ТО ПОШЛО<br> НЕ ТАК!</h2>
+      <p class="modal__content">Проверьте поля,выделенные красным,скорее всего вы забыли их заполнить</p>
+      <button class="modal__button button" type="button">ок</button>
     </div>
   </div>
 
-  <div class="modal__container">
-    <div class="form__modal modal modal--success">
+  <div class="modal__container modal__container--success modal__container--open" aria-hidden="true">
+    <div class="form__modal modal modal--padding">
       <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-      <p class="modal__content">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+      <p class="modal__content modal__content--padding">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
         В ближайшее время мы опубликуем его на сайте.</p>
       <div class="modal__button-wrapper">
-        <button class="modal__button button">Закрыть окно</button>
+        <button class="modal__button modal__button--secondary button" type="button">Закрыть окно</button>
       </div>
     </div>
   </div>
+
   <script src="js/script.js"></script>
 </body>
 

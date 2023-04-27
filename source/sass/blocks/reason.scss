@@ -23,7 +23,7 @@
 
     &-content {
       font-size: 14px;
-      padding-bottom: 55px;
+      padding-bottom: 56px;
     }
   }
 
@@ -38,30 +38,24 @@
 
 .reason__list {
   @include m.list-reset;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
 
   @media (min-width: v.$tablet-width) {
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .reason__item {
   position: relative;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
 
   &--background-grey {
     position: relative;
     margin: 0;
-    padding: 24px 26px;
+    padding: 25px 35px 26px;
     background-color: v.$gallery;
-  }
-
-  &--column {
-    padding: 24px 15px 27px;
   }
 
   &--icon {
@@ -84,54 +78,37 @@
   }
 
   &--house::before {
-    background-image: url("../img/icon-house.svg");
+    background-image: url("../img/icons/house.svg");
     background-size: 40px 40px;
   }
 
   &--burger::before {
-    background-image: url("../img/icon-burger.svg");
+    background-image: url("../img/icons/burger.svg");
     background-size: 40px 35px;
   }
 
   &--souvenir::before {
-    background-image: url("../img/icon-souvenir.svg");
+    background-image: url("../img/icons/souvenir.svg");
     background-size: 32px 38px;
   }
 
   @media (min-width: v.$tablet-width) {
-    display: flex;
-    align-items: flex-start;
-    flex-grow: 1;
-
-    &--column {
-      width: 33.33%;
-      max-width: 400px;
-      align-items: center;
-      flex-direction: column;
-      align-self: stretch;
-      padding: 158px 33px 60px 33px;
-    }
-
     &--background-grey {
-      padding: 42px 33px 39px 33px;
+      padding: 42px 33px 42px 33px;
     }
 
     &--image {
-      width: 100%;
-      flex-wrap: nowrap;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column: 1 / -1;
     }
 
-    &--reverse {
-      flex-direction: row-reverse;
-      justify-content: flex-start;
+    &--grid {
+      grid-column: 1 / -1;
     }
 
     &--icon {
-      padding-bottom: 0;
-    }
-
-    &--icon:last-child {
-      padding-bottom: 0;
+      padding: 157px 33px 60px 33px;
     }
 
     &--icon::before {
@@ -142,28 +119,28 @@
     }
 
     &--house::before {
-      background-image: url("../img/icon-house.svg");
+      background-image: url("../img/icons/house.svg");
       background-size: 77px 72px;
     }
 
     &--burger::before {
-      background-image: url("../img/icon-burger.svg");
+      background-image: url("../img/icons/burger.svg");
       background-size: 80px 68px;
     }
 
     &--souvenir::before {
-      background-image: url("../img/icon-souvenir.svg");
+      background-image: url("../img/icons/souvenir.svg");
       background-size: 66px 75px;
     }
   }
 
   @media (min-width: v.$desktop-width) {
     &--background-grey {
-      padding: 54px 50px 52px 50px;
+      padding: 54px 50px 54px 50px;
     }
 
     &--icon {
-      padding: 169px 50px 8px 50px;
+      padding: 170px 50px 68px 50px;
     }
 
     &--icon::before {
@@ -187,6 +164,9 @@
 
 .reason__wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / 2;
   padding: 39px 0 35px;
   background-color: v.$half-baked;
 
@@ -200,26 +180,23 @@
     position: absolute;
     top: 0;
     left: 0;
-    display: block;
     width: 100%;
     height: 37px;
     background-color: v.$half-baked;
-    background-image: url("../img/header-trinagle-mobile.svg");
+    background-image: url("../img/backgrounds/header-trinagle-mobile.svg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
   }
 
   @media (min-width: v.$tablet-width) {
-    width: 33.34%;
-    min-width: 256px;
-    min-height: 256px;
-    padding: 53px 33px 31px 33px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    flex-grow: 1;
+    min-height: 255px;
+    padding: 53px 33px 30px 33px;
 
+    &--reverse {
+      padding: 53px 25px 30px 25px;
+      grid-column: 3 / 4;
+    }
 
     &--triangle::after {
       display: none;
@@ -227,7 +204,11 @@
   }
 
   @media (min-width: v.$desktop-width) {
-    padding: 53px 55px 31px 55px;
+    padding: 53px 65px 31px 65px;
+
+    &--reverse {
+      padding: 53px 70px 31px 70px;
+    }
   }
 }
 
@@ -273,6 +254,7 @@
     padding: 0 27px 14px 27px;
 
     &--mobile {
+      text-align: center;
       padding-bottom: 25px;
     }
   }
@@ -283,28 +265,36 @@
     &--mobile {
       padding-bottom: 25px;
     }
-  }
 
-  &--pagination {
-    padding-bottom: 11px;
+    &--pagination {
+      padding-bottom: 11px;
+    }
   }
 }
 
+.reason__title--pagination br {
+  display: none;
+
+  @media (min-width: v.$tablet-width) {
+    display: block;
+  }
+}
 
 .reason__content {
   @include m.font (400, 14px, v.$mine-shaft, 21px);
   text-align: center;
   text-transform: uppercase;
   margin: 0;
-  padding: 0 18px;
+  padding: 0;
 
   &--color-white {
     color: v.$white;
+    padding: 0 20px;
   }
 
   &--mobile {
     text-align: left;
-    padding-left: 65px;
+    padding: 0 18px 0 65px;
   }
 
   @media (min-width: v.$tablet-width) {
@@ -312,14 +302,16 @@
 
     &--mobile {
       text-align: center;
-      padding: 0 11px 60px;
     }
   }
+}
+
+.reason__content-br {
+  display: none;
 
   @media (min-width: v.$desktop-width) {
-    &--mobile {
-      padding: 0 11px 60px;
-    }
+    display: block;
+    white-space: pre-wrap;
   }
 }
 
@@ -336,8 +328,14 @@
 }
 
 .reason__picture {
-  width: 66.66%;
-  height: 100%;
+  @media (min-width: v.$tablet-width) {
+    grid-column: 2 / 4;
+
+    &--reverse {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+    }
+  }
 }
 
 .reason__image {
@@ -347,9 +345,7 @@
   object-fit: cover;
 
   @media (min-width: v.$tablet-width) {
-    width: 100%;
     height: 100%;
-    object-fit: cover;
   }
 }
 
@@ -357,9 +353,7 @@
   @include m.font (400, 14px, v.$mine-shaft, 21px);
   text-align: center;
   text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
+  margin: 0;
   padding: 0 18px 17px;
 
   &--color-white {
@@ -368,7 +362,7 @@
 
   @media (min-width: v.$tablet-width) {
     &--position {
-      padding-bottom: 25px;
+      padding-bottom: 22px;
     }
 
     &--color-white {

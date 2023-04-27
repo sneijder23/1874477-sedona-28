@@ -1,11 +1,15 @@
 @use "variables.scss" as v;
 
+.presentation {
+  padding: 0 20px;
+}
+
 .presentation__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0;
-  padding: 17px 20px 0 20px;
+  padding: 0 20px;
 
   @media (min-width: v.$tablet-width) {
     padding: 0 60px;
@@ -22,16 +26,16 @@
 
   @media (min-width: v.$tablet-width) {
     margin-bottom: 89px;
-    padding: 0 95px;
+    padding: 0 75px;
   }
 
   @media (min-width: v.$desktop-width) {
-    padding: 0 60px;
+    padding: 0 40px;
   }
 }
 
 .presentation__header-title {
-  padding-bottom: 30px;
+  padding-bottom: 27px;
 
   @media (min-width: v.$tablet-width) {
     font-size: 30px;
@@ -50,12 +54,12 @@
 
 .presentation__video {
   @media (min-width: v.$tablet-width) {
-    margin-bottom: 41px;
-    padding: 0 60px;
+    margin-bottom: 43px;
+    padding: 0 40px;
   }
 
   @media (min-width: v.$desktop-width) {
     margin-bottom: 83px;
-    padding: 0 201px 0 199px;
+    padding: 0 181px 0 179px;
   }
 }

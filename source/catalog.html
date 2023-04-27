@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=width-device, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body>
@@ -13,7 +17,8 @@
   <header>
     <div class="main-header">
       <a class="main-header__logo" href="index.html">
-        <img class="main-header__logo-image" src="img/logo-sedona.svg" width="185" height="96" alt="Логотип Седона">
+        <img class="main-header__logo-image" src="img/logos/city-sedona.svg" width="185" height="96"
+          alt="Логотип Седона">
       </a>
       <nav class="main-nav main-nav--nojs">
         <button class="main-nav__toggle toggle" type="button">
@@ -39,11 +44,9 @@
 
   <main class="main-container">
 
-    <section class="hero">
-      <div class="hero__wrapper hero__wrapper--position">
-        <h1 class="visually-hidden">Галерея Седоны</h1>
-        <img class="hero__image-title" src="img/sedona.svg" width="229" height="39" alt="Добро пожаловать в Седону">
-      </div>
+    <section class="hero hero--position">
+      <h1 class="visually-hidden">Галерея Седоны</h1>
+      <img class="hero__image-title" src="img/logos/sedona.svg" width="229" height="39" alt="Добро пожаловать в Седону">
     </section>
     <section class="gallery">
       <header class="gallery__header header">
@@ -53,10 +56,16 @@
       </header>
       <ul class="gallery__list">
         <li class="gallery__item gallery__item--main">
-          <picture class="gallery__picture">
-            <source media="(min-width: 768px)" srcset="img/photo-1-desktop.jpg">
-            <img class="gallery__image gallery__image--main" src="img/photo-1-mobile@2x.jpg" alt="Дорога и закат">
-          </picture>
+          <a class="gallery__item-link" href="#no_scroll">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/gallery/photo-1-desktop@1x.jpg 1x, img/gallery/photo-1-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/gallery/photo-1-tablet@1x.jpg 1x,imggallery/photo-1-tablet@2x.jpg 2x">
+              <img class="gallery__image gallery__image--main" src="img/gallery/photo-1-mobile@1x.jpg"
+                srcset="img/gallery/photo-1-mobile@2x.jpg 2x" alt="Дорога и закат">
+            </picture>
+          </a>
           <div class="gallery__inner gallery__inner--main">
             <h3 class="gallery__image-title gallery__image-title--main">Неродные просторы</h3>
             <p class="gallery__image-author">Автор фото: Борис</p>
@@ -64,10 +73,16 @@
           </div>
         </li>
         <li class="gallery__item">
-          <picture class="gallery__picture">
-            <source media="(min-width: 768px)" srcset="img/photo-2-desktop.jpg">
-            <img class="gallery__image" src="img/photo-2-mobile@2x.jpg" alt="Растение и горы">
-          </picture>
+          <a class="gallery__item-link" href="#no_scroll">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/gallery/photo-2-desktop@1x.jpg 1x, img/gallery/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/gallery/photo-2-tablet@1x.jpg 1x,imggallery/photo-2-tablet@2x.jpg 2x">
+              <img class="gallery__image" src="img/gallery/photo-2-mobile@1x.jpg"
+                srcset="img/gallery/photo-2-mobile@2x.jpg 2x" alt="Растение и горы">
+            </picture>
+          </a>
           <div class="gallery__inner">
             <h3 class="gallery__image-title">Местная растительность</h3>
             <p class="gallery__image-author">Автор фото: Сергей</p>
@@ -75,10 +90,16 @@
           </div>
         </li>
         <li class="gallery__item gallery__item--background">
-          <picture class="gallery__picture">
-            <source media="(min-width: 768px)" srcset="img/photo-3-desktop.jpg">
-            <img class="gallery__image" src="img/photo-3-mobile@2x.jpg" alt="Трасса в лесу">
-          </picture>
+          <a class="gallery__item-link" href="#no_scroll">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/gallery/photo-3-desktop@1x.jpg 1x, img/gallery/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/gallery/photo-3-tablet@1x.jpg 1x,imggallery/photo-3-tablet@2x.jpg 2x">
+              <img class="gallery__image" src="img/gallery/photo-3-mobile@1x.jpg"
+                srcset="img/gallery/photo-3-mobile@2x.jpg 2x" alt="Трасса в лесу">
+            </picture>
+          </a>
           <div class="gallery__inner">
             <h3 class="gallery__image-title">Дорога на север</h3>
             <p class="gallery__image-author">Автор фото: Петр</p>
@@ -86,10 +107,16 @@
           </div>
         </li>
         <li class="gallery__item">
-          <picture class="gallery__picture">
-            <source media="(min-width: 768px)" srcset="img/photo-4-desktop.jpg">
-            <img class="gallery__image" src="img/photo-4-mobile@2x.jpg" alt="Скалистый мост">
-          </picture>
+          <a class="gallery__item-link" href="#no_scroll">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/gallery/photo-4-desktop@1x.jpg 1x, img/gallery/photo-4-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/gallery/photo-4-tablet@1x.jpg 1x,imggallery/photo-4-tablet@2x.jpg 2x">
+              <img class="gallery__image" src="img/gallery/photo-4-mobile@1x.jpg"
+                srcset="img/gallery/photo-4-mobile@2x.jpg 2x" alt="Скалистый мост">
+            </picture>
+          </a>
           <div class="gallery__inner">
             <h3 class="gallery__image-title">Мост дьявола</h3>
             <p class="gallery__image-author">Автор фото: Антон</p>
@@ -105,20 +132,24 @@
           <p class="presentation__header-content header__content">Смотрите видеопрезентацию и скорее за билетами,
             пока они не подорожали в очередной раз!</p>
         </header>
-        </div>
-        <div class="presentation__video video">
-          <a class="video__link" href="#">
-            <picture>
-              <source srcset="img/video-mobile@2x.jpg" type="image/webp">
-              <img class="video__media" src="img/video-mobile@2x.jpg" width="280" height="177" alt="Видео городка">
-            </picture>
-          </a>
-          <button class="video__button" type="button" aria-label="Запустить видео">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="54" fill="none" viewBox="0 0 48 54">
-              <path class="video__button-icon" fill="#fff" fill-opacity=".7" d="M48 27 0 54V0l48 27Z" />
-            </svg>
-          </button>
-        </div>
+      </div>
+      <div class="presentation__video video">
+        <a class="video__link">
+          <picture>
+            <source media="(min-width: 1200px)"
+              srcset="img/gallery/video-desktop@1x.jpg 1x, img/gallery/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/gallery/video-tablet@1x.jpg 1x,imggallery/video-tablet@2x.jpg 2x">
+            <img class="video__media" src="img/gallery/video-mobile@1x.jpg" srcset="img/gallery/video-mobile@2x.jpg 2x"
+              width="280" height="177" alt="Видео городка">
+          </picture>
+        </a>
+        <button class="video__button" type="button" aria-label="Запустить видео">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="54" fill="none" viewBox="0 0 48 54">
+            <path class="video__button-icon" fill="#fff" fill-opacity=".7" d="M48 27 0 54V0l48 27Z" />
+          </svg>
+        </button>
+      </div>
     </section>
 
   </main>

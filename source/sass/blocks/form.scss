@@ -1,6 +1,18 @@
 @use "variables.scss" as v;
 @use "mixins.scss" as m;
 
+.form {
+  margin-bottom: 15px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 3px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
 .form__inner {
   @media (min-width: v.$tablet-width) {
     display: grid;
