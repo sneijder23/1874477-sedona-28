@@ -21,6 +21,9 @@ const successModal = document.querySelector('.modal__container--success');
 const successCloseButton = successModal.querySelector('.modal__button');
 const errorCloseButton = errorModal.querySelector('.modal__button');
 
+successModal.classList.remove('modal__container--open');
+errorModal.classList.remove('modal__container--open');
+
 form.addEventListener('submit', function (event) {
   event.preventDefault(); // предотвращаем отправку формы по умолчанию
 
