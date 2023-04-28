@@ -68,7 +68,7 @@
 
   @media (min-width: v.$tablet-width) {
     @include m.font(700, 14px, v.$black, 21px);
-    padding: 18px 18px 17px 18px;
+    padding: 19px 18px 16px 18px;
 
     &--current {
       color: v.$pine-cone;

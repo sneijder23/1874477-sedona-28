@@ -7,14 +7,17 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 34px 18px 33px;
+  padding: 27px 18px 33px;
 
   @media (min-width: v.$tablet-width) {
+    max-width: 878px;
     flex-direction: row;
-    padding: 31px 55px;
+    margin: 0 auto;
+    padding: 28px 55px;
   }
 
   @media (min-width: v.$desktop-width) {
+    max-width: 1440px;
     padding: 31px 116px;
   }
 }

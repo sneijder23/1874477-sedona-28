@@ -1,57 +1,83 @@
 @use "variables.scss" as v;
 
 .hero {
-  width: 100%;
-  background-color: v.$wedgewood;
-  background-image: url("../img/hero-background-mobile.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  @media (min-width: v.$tablet-width) {
-    background-image: url("../img/hero-background-desktop.jpg");
-  }
-}
-
-.hero__wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0;
   padding: 90px 18px 85px 18px;
-  background-image: url("../img/hero-triangle.svg");
+  background-color: v.$wedgewood;
+  background-image:
+    url("../img/backgrounds/hero-triangle.svg"),
+    url("../img/backgrounds/hero-background-mobile@1x.jpg");
+  background-size: auto;
+  background-position:
+    center bottom,
+    center bottom;
   background-repeat: no-repeat;
-  background-position: bottom center;
 
   &--position {
     padding-top: 52px;
     padding-bottom: 67px;
   }
 
+  &--secondary {
+    padding-top: 52px;
+    padding-bottom: 67px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../img/backgrounds/hero-triangle.svg"),
+      url("../img/backgrounds/hero-background-mobile@2x.jpg");
+    background-size:
+      auto,
+      auto 389px;
+  }
+
   @media (min-width: v.$tablet-width) {
     padding-top: 77px;
-    padding-bottom: 94px;
+    padding-bottom: 91px;
+    background-image:
+      url("../img/backgrounds/hero-triangle.svg"),
+      url("../img/backgrounds/hero-background-tablet@1x.jpg");
 
     &--position {
+      padding-top: 103px;
+      padding-bottom: 120px;
+    }
+
+    &--secondary {
       padding-top: 95px;
       padding-bottom: 117px;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../img/backgrounds/hero-triangle.svg"),
+        url("../img/backgrounds/hero-background-tablet@2x.jpg");
+      background-size:
+        auto,
+        auto 518px;
     }
   }
 
   @media (min-width: v.$desktop-width) {
-    padding-top: 78px;
-    padding-bottom: 93px;
-
-    &--position {
-      padding-top: 101px;
-      padding-bottom: 122px;
+    &--secondary {
+      padding-top: 103px;
+      padding-bottom: 120px;
     }
   }
 }
 
 .hero__image-title {
+  display: block;
+  margin: 0 auto;
+
   @media (min-width: v.$tablet-width) {
-    width: 459px;
-    height: auto;
+    width: 458px;
+    height: 78px;
+
+    &--main {
+      width: 461px;
+      height: 350px;
+    }
   }
 }

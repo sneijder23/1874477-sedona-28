@@ -1,3 +1,4 @@
+// Мобильное меню сайта
 const mainNavToggle = document.querySelector('.main-nav__toggle');
 const mainNavSiteList = document.querySelector('.main-nav');
 
