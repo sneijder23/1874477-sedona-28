@@ -16,14 +16,18 @@
 }
 
 .video__button {
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 48px;
+  height: 54px;
   margin: 0;
   padding: 10px;
   border: none;
-  background-color: transparent;
+  mask-image: url("../img/stack.svg#video-button");
+  mask-repeat: no-repeat;
   z-index: 1;
   cursor: pointer;
 }

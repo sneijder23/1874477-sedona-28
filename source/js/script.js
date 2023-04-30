@@ -2,7 +2,7 @@
 const mainNavToggle = document.querySelector('.main-nav__toggle');
 const mainNavSiteList = document.querySelector('.main-nav');
 
-mainNavSiteList.classList.remove('.main-nav--nojs');
+mainNavSiteList.classList.remove('main-nav--nojs');
 mainNavSiteList.classList.add('main-nav--close');
 
 mainNavToggle.addEventListener('click', function () {
@@ -12,3 +12,10 @@ mainNavToggle.addEventListener('click', function () {
     mainNavSiteList.classList.replace('main-nav--open', 'main-nav--close');
   }
 });
+
+
+if (window.location.pathname === '/index.html') {
+  const mapImage = document.querySelector('.map__wrapper');
+
+  mapImage.classList.remove('map__wrapper--nojs')
+}

@@ -11,5 +11,20 @@
   color: v.$white;
   background-color: v.$half-baked;
   border: none;
+  user-select: none;
   cursor: pointer;
+
+  &:focus,
+  &:hover {
+    background-color: v.$fountain-blue;
+  }
+
+  &:active {
+    color: rgba(v.$white, 0.3);
+    background-color: v.$steel-blue;
+  }
+
+  &:active::after {
+    background-color: rgba(v.$white, 0.3);
+  }
 }

@@ -1,0 +1,31 @@
+@use "variables.scss" as v;
+@use "mixins.scss" as m;
+
+.meta {
+  text-align: center;
+  padding: 5px;
+  padding-bottom: 25px;
+
+  @media (min-width: v.$tablet-width) {
+    max-width: 160px;
+    padding: 7px 5px 12px 5px;
+  }
+}
+
+.meta__link {
+  @include m.font (700, 21px, v.$black, 26px);
+  text-transform: uppercase;
+
+  &:focus,
+  &:hover {
+    color: v.$half-baked;
+  }
+
+  &:active {
+    color: v.$pink-swan;
+  }
+}
+
+.meta__tag {
+  vertical-align: middle;
+}
