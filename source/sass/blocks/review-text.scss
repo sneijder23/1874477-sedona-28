@@ -28,6 +28,25 @@
   background-color: v.$concrete;
   resize: none;
 
+  &:hover,
+  &:focus {
+    background-color: v.$mercury;
+  }
+
+  &:active {
+    background-color: v.$white;
+    outline: 4px solid v.$mercury;
+  }
+
+  &::placeholder {
+    color: v.$black;
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    background-color: v.$crayola-crystal;
+  }
+
   @media (min-width: v.$tablet-width) {
     max-width: 768px;
     min-height: 160px;

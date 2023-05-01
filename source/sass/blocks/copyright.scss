@@ -1,0 +1,51 @@
+@use "variables.scss" as v;
+
+.copyright {
+  display: flex;
+  align-items: center;
+}
+
+.copyright__link {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  padding: 5px 0;
+
+  &:focus,
+  &:hover {
+    color: v.$half-baked;
+  }
+
+  &:active {
+    color: v.$pink-swan;
+  }
+}
+
+.copyright__text {
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin-right: 12px;
+  max-width: 130px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-top: -4px;
+  }
+}
+
+.copyright__icon {
+  width: 27px;
+  height: 40px;
+  display: block;
+  align-self: center;
+  margin-top: -4px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-top: -4px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-right: -1px;
+    margin-top: -7px;
+  }
+}

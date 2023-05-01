@@ -78,17 +78,17 @@
   }
 
   &--house::before {
-    background-image: url("../img/icons/house.svg");
+    background-image: url("../img/stack.svg#house");
     background-size: 40px 40px;
   }
 
   &--burger::before {
-    background-image: url("../img/icons/burger.svg");
+    background-image: url("../img/stack.svg#burger");
     background-size: 40px 35px;
   }
 
   &--souvenir::before {
-    background-image: url("../img/icons/souvenir.svg");
+    background-image: url("../img/stack.svg#souvenir");
     background-size: 32px 38px;
   }
 
@@ -115,21 +115,18 @@
       top: 60px;
       left: 0;
       width: 100%;
-      height: 72px;
+      height: 75px;
     }
 
     &--house::before {
-      background-image: url("../img/icons/house.svg");
       background-size: 77px 72px;
     }
 
     &--burger::before {
-      background-image: url("../img/icons/burger.svg");
       background-size: 80px 68px;
     }
 
     &--souvenir::before {
-      background-image: url("../img/icons/souvenir.svg");
       background-size: 66px 75px;
     }
   }
@@ -140,7 +137,7 @@
     }
 
     &--icon {
-      padding: 170px 50px 68px 50px;
+      padding: 170px 50px 67px 50px;
     }
 
     &--icon::before {
@@ -149,15 +146,15 @@
     }
 
     &--house::before {
-      background-size: 80px 73px;
+      background-size: 83px 73px;
     }
 
     &--burger::before {
-      background-size: 73px 69px;
+      background-size: 74px 69px;
     }
 
     &--souvenir::before {
-      background-size: 80px 79px;
+      background-size: 78px 75px;
     }
   }
 }
@@ -173,20 +170,10 @@
   &--triangle {
     padding-top: 70px;
     padding-bottom: 40px;
-  }
-
-  &--triangle::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 37px;
-    background-color: v.$half-baked;
-    background-image: url("../img/backgrounds/header-trinagle-mobile.svg");
+    background-image: url("../img/stack.svg#header-trinagle-mobile");
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: cover;
+    background-size: 768px 37px;
   }
 
   @media (min-width: v.$tablet-width) {
@@ -198,8 +185,8 @@
       grid-column: 3 / 4;
     }
 
-    &--triangle::after {
-      display: none;
+    &--triangle {
+      background-image: none;
     }
   }
 

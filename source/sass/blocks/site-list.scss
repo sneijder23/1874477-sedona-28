@@ -63,15 +63,47 @@
   text-transform: uppercase;
   display: block;
   width: 100%;
-  padding: 15px 45px 14px 45px;
+  padding: 15px 55px 15px 55px;
+
+  &:focus,
+  &:hover {
+    background-color: v.$fountain-blue;
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(v.$white, 0.3);
+    background-color: v.$steel-blue;
+    outline: none;
+  }
 
 
   @media (min-width: v.$tablet-width) {
     @include m.font(700, 14px, v.$black, 21px);
     padding: 19px 18px 16px 18px;
 
+    &:focus,
+    &:hover {
+      color: v.$half-baked;
+      background-color: inherit;
+    }
+
+    &:active {
+      color: v.$black;
+      opacity: 0.3;
+      background-color: inherit;
+    }
+
     &--current {
       color: v.$pine-cone;
+      user-select: none;
+
+      &:focus,
+      &:hover,
+      &:active {
+        color: v.$pine-cone;
+        opacity: 1;
+      }
     }
   }
 }

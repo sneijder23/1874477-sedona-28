@@ -1,3 +1,4 @@
+@use "variables.scss" as v;
 @use "mixins.scss" as m;
 
 .social__list {
@@ -20,8 +21,40 @@
 }
 
 .social__link {
+  position: relative;
   min-width: 48px;
   min-height: 48px;
   display: flex;
   align-items: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 24px;
+    height: 14px;
+    background-color: v.$white;
+    mask-repeat: no-repeat;
+    transform: translateY(-50%);
+  }
+
+  &--vkontakte::after {
+    mask-image: url("../img/stack.svg#vkontakte");
+  }
+
+  &--youtube::after {
+    width: 20px;
+    height: 14px;
+    mask-image: url("../img/stack.svg#youtube");
+  }
+
+  &--telegram::after {
+    width: 21px;
+    height: 18px;
+    mask-image: url("../img/stack.svg#telegram");
+  }
+
+  &:active + &::after {
+    background-color: rgba(v.$white, 0.3);
+  }
 }

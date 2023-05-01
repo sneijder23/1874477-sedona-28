@@ -21,17 +21,25 @@
 
 .main-nav__toggle {
   align-self: flex-end;
-  width: 23px;
-  height: 22px;
-  margin: 17px 18px 17px 10px;
-  padding: 0;
+  width: 63px;
+  height: 56px;
+  padding: 17px 18px 17px 10px;
   border: none;
   background-color: transparent;
-  background-image: url("../../img/icons/menu.svg");
+  background-image: url("../img/stack.svg#menu");
   background-repeat: no-repeat;
-  background-position: top;
-  background-size: contain;
+  background-size: 23px 22px;
+  background-position: center;
   cursor: pointer;
+
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-nav {
@@ -53,16 +61,18 @@
   &--open {
     .main-nav__list {
       position: absolute;
-      top: -97px;
+      top: 0;
       left: 0;
       width: 100%;
     }
 
     .main-nav__toggle {
       display: block;
-      height: 23px;
-      margin-bottom: 16px;
-      background-image: url("../img/icons/cross.svg");
+      width: 62px;
+      height: 56px;
+      padding-bottom: 15px;
+      background-image: url("../img/stack.svg#cross");
+      background-size: 23px 23px;
       z-index: 1;
     }
   }
