@@ -293,24 +293,24 @@
   }
 }
 
-.reason__content-br {
-  display: none;
-
-  @media (min-width: v.$desktop-width) {
-    display: block;
-    white-space: pre-wrap;
-  }
-}
-
-.reason__content br {
+.reason__content-break {
   display: none;
 
   @media (min-width: v.$tablet-width) {
     display: block;
+
+    &--tablet {
+      display: none;
+    }
   }
 
   @media (min-width: v.$desktop-width) {
     display: none;
+
+    &--desktop {
+      display: block;
+      white-space: pre-wrap;
+    }
   }
 }
 
