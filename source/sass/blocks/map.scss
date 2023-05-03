@@ -20,7 +20,7 @@
     border: 5px solid v.$white;
     border-radius: 50%;
     background-color: v.$half-baked;
-    mask-image: url("../img/stack.svg#map-marker");
+    background-image: url("../img/stack.svg#map-marker");
   }
 
   @media (min-width: v.$tablet-width) {

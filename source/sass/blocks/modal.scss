@@ -28,18 +28,30 @@
   background-color: v.$white;
 
   &--padding {
+    top: 402px;
     padding: 0;
     padding-top: 39px;
   }
 
   @media (min-width: v.$tablet-width) {
+    top: 283px;
     width: 400px;
-    padding: 50px 40px 49px 40px;
+    padding: 48px 40px 49px 40px;
 
     &--padding {
+      top: 162px;
       width: 640px;
       padding: 0;
-      padding-top: 53px;
+      padding-top: 44px;
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    top: 244px;
+    padding-bottom: 48px;
+
+    &--padding {
+      top: 145px;
     }
   }
 }
@@ -48,16 +60,18 @@
   @include m.font(700, 18px, v.$white, 26px);
   font-family: v.$family;
   width: 180px;
+  padding: 18px 12px 14px 12px;
 
   &--secondary {
     width: 280px;
   }
 
   @media (min-width: v.$tablet-width) {
+    font-size: 21px;
     width: 272px;
 
     &--secondary {
-      width: 452px;
+      width: 458px;
     }
   }
 }
@@ -71,20 +85,25 @@
   background-color: v.$concrete;
 
   @media (min-width: v.$tablet-width) {
-    padding: 44px 91px;
+    padding: 44px 80px;
   }
 }
 
 .modal__title {
-  @include m.font(700, 21px, v.$black, 26px);
+  @include m.font(700, 18px, v.$black, 26px);
   text-align: center;
   text-transform: uppercase;
   margin: 0;
-  padding: 0 0 30px;
+  padding: 0 0 25px;
+
+  &--padding {
+    padding: 0 10px 25px 10px;
+  }
 
   @media (min-width: v.$tablet-width) {
     font-size: 30px;
     line-height: 40px;
+    padding-bottom: 24px;
   }
 }
 
@@ -101,15 +120,25 @@
   text-align: center;
   text-transform: uppercase;
   margin: 0;
-  padding: 0 0 30px;
+  padding: 0 0 28px;
 
   &--padding {
-    padding: 0 37px 30px 39px;
+    padding: 0 37px 51px 39px;
   }
 
   @media (min-width: v.$tablet-width) {
+    padding-bottom: 46px;
+
     &--padding {
-      padding: 0 107px 30px 115px;
+      padding: 0 111px 51px 110px;
     }
+  }
+}
+
+.modal__content br {
+  display: block;
+
+  @media (min-width: v.$tablet-width) {
+    display: none;
   }
 }

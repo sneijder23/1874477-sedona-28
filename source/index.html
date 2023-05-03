@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=width-device, initial-scale=1">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -92,13 +92,15 @@
             </li>
             <li class="reason__item reason__item--icon reason__item--burger">
               <h3 class="reason__title reason__title--mobile">Еда</h3>
-              <p class="reason__content reason__content--mobile">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР,<br> вы не
+              <p class="reason__content reason__content--mobile">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР,&nbsp;<span
+                  class="reason__content-break"></span> вы не
                 разочаруетесь!</p>
             </li>
             <li class="reason__item reason__item--icon reason__item--souvenir">
               <h3 class="reason__title reason__title--mobile">Сувениры</h3>
-              <p class="reason__content reason__content--mobile">Не только китайского,<br><span
-                  class="reason__content-br"></span> но и местного<br>
+              <p class="reason__content reason__content--mobile">Не только китайского,&nbsp;<br
+                  class="reason__content-break reason__content-break--desktop"> но и местного&nbsp;<br
+                  class="reason__content-break">
                 производства!
               </p>
             </li>
@@ -108,12 +110,22 @@
           <div class="reason__wrapper reason__wrapper--reverse">
             <h3 class="reason__title reason__title--color-white">ТАМ ЕСТЬ Мост&nbsp;дьявола</h3>
             <span class="reason__pagination reason__pagination--color-white">— №2 —</span>
-            <p class="reason__content reason__content--color-white">Да, по нему можно<br> пройти!<span
-                class="reason__content-br"></span> Если вы осмелитесь,
+            <p class="reason__content reason__content--color-white">Да, по нему можно&nbsp;<br
+                class="reason__content-break">
+              пройти!&nbsp;<br
+                class="reason__content-break reason__content-break--tablet reason__content-break--desktop">Если вы
+              осмелитесь,
               конечно</p>
           </div>
           <div class="reason__picture reason__picture--reverse">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img/index/photo-bridge-desktop@1x.webp 1x, img/index/photo-bridge-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/index/photo-bridge-tablet@1x.webp 1x,img/index/photo-bridge-tablet@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/index/photo-bridge-mobile@1x.webp 1x, img/index/photo-bridge-mobile@2x.webp 2x">
+
               <source media="(min-width: 1200px)"
                 srcset="img/index/photo-bridge-desktop@1x.jpg 1x, img/index/photo-bridge-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)"
@@ -124,17 +136,20 @@
           </div>
         </li>
         <li class="reason__item reason__item--background-grey">
-          <h3 class="reason__title reason__title--pagination">НЕБОЛЬШАЯ<br> ПЛОЩАДЬ</h3>
+          <h3 class="reason__title reason__title--pagination">НЕБОЛЬШАЯ&nbsp;<br class="reason__content-break"> ПЛОЩАДЬ
+          </h3>
           <span class="reason__pagination reason__pagination--position">— №3 —</span>
           <p class="reason__content">ВСЕ интересные места находятся очень близко</p>
         </li>
         <li class="reason__item reason__item--background-grey">
-          <h3 class="reason__title reason__title--pagination">КРАСИВАЯ<br> ДОРОГА</h3>
+          <h3 class="reason__title reason__title--pagination">КРАСИВАЯ&nbsp;<br class="reason__content-break"> ДОРОГА
+          </h3>
           <span class="reason__pagination reason__pagination--position">— №4 —</span>
-          <p class="reason__content">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем<br> НЕ&nbsp;СКУЧНО!</p>
+          <p class="reason__content">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем&nbsp;<br
+              class="reason__content-break reason__content-break--desktop">НЕ СКУЧНО!</p>
         </li>
         <li class="reason__item reason__item--background-grey">
-          <h3 class="reason__title reason__title--pagination">МАЛО<br> ТУРИСТОВ</h3>
+          <h3 class="reason__title reason__title--pagination">МАЛО&nbsp;<br class="reason__content-break"> ТУРИСТОВ</h3>
           <span class="reason__pagination reason__pagination--position">— №5 —</span>
           <p class="reason__content">Большинство едет в гранд каньон и толпится там</p>
         </li>
@@ -144,7 +159,8 @@
       <div class="search__wrapper">
         <header class="search__header header">
           <h2 class="search__header-title header__title">Заинтересовались?</h2>
-          <p class="search__header-content header__content">Укажите предполагаемые даты поездки,<br>
+          <p class="search__header-content header__content">Укажите предполагаемые даты поездки,<br
+              class="reason__content-break">
             и мы покажем вам лучшие предложения гостиниц в седоне
           </p>
         </header>
@@ -160,6 +176,12 @@
           title="Расположение Седоны на карте">
         </iframe>
         <picture>
+          <source type="image/webp" media="(min-width: 1200px)"
+            srcset="img/index/map-desktop@1x.webp 1x, img/index/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/index/map-tablet@1x.webp 1x,img/index/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/index/map-mobile@1x.webp 1x, img/index/map-mobile@2x.webp 2x">
+
           <source media="(min-width: 1200px)" srcset="img/index/map-desktop@1x.jpg 1x, img/index/map-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/index/map-tablet@1x.jpg 1x,img/index/map-tablet@2x.jpg 2x">
           <img class="map__image" src="img/index/map-mobile@1x.jpg" srcset="img/index/map-mobile@2x.jpg 2x"
@@ -213,7 +235,7 @@
     </div>
 
   </footer>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
