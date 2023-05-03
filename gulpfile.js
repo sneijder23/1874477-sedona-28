@@ -11,7 +11,8 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import { stacksvg } from 'gulp-stacksvg';
-import {deleteAsync} from 'del';
+import { deleteAsync } from 'del';
+import sourcemaps from 'gulp-sourcemaps';
 
 // Styles
 export const styles = () => {
@@ -36,10 +37,12 @@ const html = () => {
 // Scripts
 const scripts = () => {
   return gulp.src('source/js/*.js')
+    .pipe(sourcemaps.init())
     .pipe(terser())
     .pipe(rename(function (path) {
       path.extname = ".min.js";
     }))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('build/js'))
 }
 
@@ -60,10 +63,11 @@ const createWebp = () => {
   return gulp.src([
     'source/img/**/*.{png,jpg}',
     '!source/img/favicons/*.{png,jpg}',
-    '!source/img/backgrounds/*.{png,jpg}'
   ])
     .pipe(squoosh({
-      webp: {}
+      webp: {
+        quality: 80,
+      }
     }))
     .pipe(gulp.dest('build/img'))
 }
