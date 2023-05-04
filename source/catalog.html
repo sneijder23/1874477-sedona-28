@@ -9,8 +9,6 @@
   <link rel="preload" href="js/script.min.js" as="script">
   <link rel="preload" href="fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="img/backgrounds/hero-background-mobile@1x.webp" as="image" type="image/webp"
-    media="(max-width: 767px)">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
@@ -28,7 +26,7 @@
       </a>
       <nav class="main-nav main-nav--nojs">
         <button class="main-nav__toggle toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+          <span class="visually-hidden">Открыть меню/закрыть меню</span>
         </button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -76,13 +74,16 @@
               <source media="(min-width: 768px)"
                 srcset="img/gallery/photo-1-tablet@1x.jpg 1x, img/gallery/photo-1-tablet@2x.jpg 2x">
               <img class="gallery__image gallery__image--main" src="img/gallery/photo-1-mobile@1x.jpg"
-                srcset="img/gallery/photo-1-mobile@2x.jpg 2x" alt="Дорога и закат">
+                srcset="img/gallery/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога и закат">
             </picture>
           </a>
           <div class="gallery__inner gallery__inner--main">
             <h3 class="gallery__image-title gallery__image-title--main">Неродные просторы</h3>
             <p class="gallery__image-author">Автор фото: Борис</p>
-            <span class="gallery__image-likes" tabindex="0">1350</span>
+            <span class="gallery__image-likes" tabindex="0">
+              <span class="visually-hidden">Количество лайков фотографии</span>
+              1350
+            </span>
           </div>
         </li>
         <li class="gallery__item">
@@ -100,13 +101,16 @@
               <source media="(min-width: 768px)"
                 srcset="img/gallery/photo-2-tablet@1x.jpg 1x, img/gallery/photo-2-tablet@2x.jpg 2x">
               <img class="gallery__image" src="img/gallery/photo-2-mobile@1x.jpg"
-                srcset="img/gallery/photo-2-mobile@2x.jpg 2x" alt="Растение и горы">
+                srcset="img/gallery/photo-2-mobile@2x.jpg 2x" width="280" height="280" alt="Растение и горы">
             </picture>
           </a>
           <div class="gallery__inner">
             <h3 class="gallery__image-title">Местная растительность</h3>
             <p class="gallery__image-author">Автор фото: Сергей</p>
-            <span class="gallery__image-likes" tabindex="0">143</span>
+            <span class="gallery__image-likes" tabindex="0">
+              <span class="visually-hidden">Количество лайков фотографии</span>
+              143
+            </span>
           </div>
         </li>
         <li class="gallery__item gallery__item--background">
@@ -124,13 +128,16 @@
               <source media="(min-width: 768px)"
                 srcset="img/gallery/photo-3-tablet@1x.jpg 1x, img/gallery/photo-3-tablet@2x.jpg 2x">
               <img class="gallery__image" src="img/gallery/photo-3-mobile@1x.jpg"
-                srcset="img/gallery/photo-3-mobile@2x.jpg 2x" alt="Трасса в лесу">
+                srcset="img/gallery/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Трасса в лесу">
             </picture>
           </a>
           <div class="gallery__inner">
             <h3 class="gallery__image-title">Дорога на север</h3>
             <p class="gallery__image-author">Автор фото: Петр</p>
-            <span class="gallery__image-likes" tabindex="0">96</span>
+            <span class="gallery__image-likes" tabindex="0">
+              <span class="visually-hidden">Количество лайков фотографии</span>
+              96
+            </span>
           </div>
         </li>
         <li class="gallery__item">
@@ -148,13 +155,16 @@
               <source media="(min-width: 768px)"
                 srcset="img/gallery/photo-4-tablet@1x.jpg 1x, img/gallery/photo-4-tablet@2x.jpg 2x">
               <img class="gallery__image" src="img/gallery/photo-4-mobile@1x.jpg"
-                srcset="img/gallery/photo-4-mobile@2x.jpg 2x" alt="Скалистый мост">
+                srcset="img/gallery/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Скалистый мост">
             </picture>
           </a>
           <div class="gallery__inner">
             <h3 class="gallery__image-title">Мост дьявола</h3>
             <p class="gallery__image-author">Автор фото: Антон</p>
-            <span class="gallery__image-likes" tabindex="0">254</span>
+            <span class="gallery__image-likes" tabindex="0">
+              <span class="visually-hidden">Количество лайков фотографии</span>
+              254
+            </span>
           </div>
         </li>
       </ul>

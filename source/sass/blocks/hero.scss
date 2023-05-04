@@ -25,12 +25,6 @@
     padding-bottom: 67px;
   }
 
-  @supports (background-image: url("../img/backgrounds/hero-background-mobile@1x.webp")) {
-    background-image:
-      url("../img/stack.svg#hero-triangle"),
-      url("../img/backgrounds/hero-background-mobile@1x.webp");
-  }
-
   @media (min-resolution: 2dppx) {
     background-image:
       url("../img/stack.svg#hero-triangle"),
@@ -38,12 +32,6 @@
     background-size:
       1200px 57px,
       auto 389px;
-
-    @supports (background-image: url("../img/backgrounds/hero-background-mobile@2x.webp")) {
-      background-image:
-        url("../img/stack.svg#hero-triangle"),
-        url("../img/backgrounds/hero-background-mobile@2x.webp");
-    }
   }
 
   @media (min-width: v.$tablet-width) {
@@ -63,12 +51,6 @@
       padding-bottom: 117px;
     }
 
-    @supports (background-image: url("../img/backgrounds/hero-background-tablet@1x.webp")) {
-      background-image:
-        url("../img/stack.svg#hero-triangle"),
-        url("../img/backgrounds/hero-background-tablet@1x.webp");
-    }
-
     @media (min-resolution: 2dppx) {
       background-image:
         url("../img/stack.svg#hero-triangle"),
@@ -76,12 +58,6 @@
       background-size:
         1200px 57px,
         auto 518px;
-
-      @supports (background-image: url("../img/backgrounds/hero-background-tablet@2x.webp")) {
-        background-image:
-          url("../img/stack.svg#hero-triangle"),
-          url("../img/backgrounds/hero-background-tablet@2x.webp");
-      }
     }
   }
 
