@@ -37,29 +37,29 @@ formElement?.addEventListener('click', (event) => {
   const isEmailError = email.value === '' || !email.value.match(/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,4}$/);
 
   if (isNameError || isSurnameError || isTelephoneError || isEmailError) {
-    document.querySelector('.modal__container--error').classList.add('modal__container--open');
+    document.querySelector('.modal--error').classList.add('modal--open');
   } else {
-    document.querySelector('.modal__container--success').classList.add('modal__container--open');
+    document.querySelector('.modal--success').classList.add('modal--open');
   }
 });
 
 if (window.location.pathname === '/form.html') {
-  const modalContainers = document.querySelectorAll('.modal__container');
+  const modalContainers = document.querySelectorAll('.modal');
   const closeButtonError = document.querySelector('.modal__button--main');
   const closeButtonSuccess = document.querySelector('.modal__button--secondary');
 
   closeButtonError?.addEventListener('click', () => {
     modalContainers.forEach((container) => {
-      if (container.classList.contains('modal__container--error')) {
-        container.classList.remove('modal__container--open');
+      if (container.classList.contains('modal--error')) {
+        container.classList.remove('modal--open');
       }
     })
   });
 
   closeButtonSuccess?.addEventListener('click', () => {
     modalContainers.forEach((container) => {
-      if (container.classList.contains('modal__container--success')) {
-        container.classList.remove('modal__container--open');
+      if (container.classList.contains('modal--success')) {
+        container.classList.remove('modal--open');
       }
     })
   });

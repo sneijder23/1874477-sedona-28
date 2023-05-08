@@ -17,6 +17,15 @@
   width: 185px;
   height: 96px;
   display: block;
+
+  &:focus,
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .main-nav__toggle {
