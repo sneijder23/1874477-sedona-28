@@ -19,15 +19,17 @@
 
   @media (min-width: v.$tablet-width) {
     &--check-list {
-      grid-template-columns: repeat(2, auto);
+      grid-template-columns: repeat(2, 260px);
       justify-content: center;
-      gap: 16px;
+      margin-left: -21px;
+      gap: 16px 38px;
     }
 
     &--checkbox-list {
-      grid-template-columns: repeat(2, auto);
+      grid-template-columns: repeat(2, 200px);
       justify-content: center;
-      gap: 14px 32px;
+      margin-left: -24px;
+      gap: 14px 56px;
     }
   }
 
@@ -35,16 +37,16 @@
     &--check-list {
       grid-template-columns: repeat(3, auto);
       justify-content: stretch;
-      gap: 16px 28px;
-      margin: 0 53px;
+      gap: 16px 32px;
+      margin: 0 23px 0 53px;
       margin-bottom: 20px;
     }
 
     &--checkbox-list {
       grid-template-columns: repeat(4, auto);
-      gap: 16px 30px;
+      gap: 16px 41px;
       justify-content: stretch;
-      margin: 0 44px;
+      margin: 0 23px 0 44px;
       padding-top: 15px;
       padding-bottom: 28px;
     }
