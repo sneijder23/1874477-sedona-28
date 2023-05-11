@@ -1,9 +1,11 @@
 // base styles
 @use "base.scss";
+@use "visually-hidden.scss";
 // blocks
 @use "./blocks/button.scss";
 @use "./blocks/header.scss";
 @use "./blocks/main-header.scss";
+@use "./blocks/main-container.scss";
 @use "./blocks/site-list.scss";
 @use "./blocks/hero.scss";
 @use "./blocks/reason.scss";

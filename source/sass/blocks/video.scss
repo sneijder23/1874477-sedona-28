@@ -16,18 +16,14 @@
 }
 
 .video__link {
-  &:hover,
-  &:focus {
-    .video__button {
-      opacity: 1;
-    }
+  &:hover ~ .video__button,
+  &:focus ~ .video__button {
+    opacity: 1;
   }
 
-  &:active {
-    .video__button {
-      opacity: 1;
-      background-color: v.$pink-swan;
-    }
+  &:active ~ .video__button {
+    opacity: 1;
+    background-color: v.$pink-swan;
   }
 }
 
